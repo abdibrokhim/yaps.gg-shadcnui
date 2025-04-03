@@ -15,6 +15,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
+import { Spotlight } from "@/components/motion-primitives/spotlight"
 
 export default function LabPage() {
   return (
@@ -34,28 +35,34 @@ export default function LabPage() {
       {/* Projects Grid */}
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {LABS.map((lab) => (
-          <Card key={lab.uid} className="overflow-hidden h-full flex flex-col py-4">
-            <div className="px-4">
-              <AspectRatio ratio={16 / 9} className="bg-muted rounded-md overflow-hidden">
-                {lab.cover ? (
-                  <Image
-                    src={lab.cover}
-                    alt={lab.title}
-                    fill
-                    className="object-cover"
-                  />
-                ) : (
-                  <div className="flex h-full items-center justify-center bg-muted">
-                    <FlaskConicalIcon className="h-10 w-10 text-muted-foreground" />
-                  </div>
-                )}
-              </AspectRatio>
-            </div>
-            <CardHeader>
-              <CardTitle>{lab.title}</CardTitle>
-              <CardDescription>{lab.description}</CardDescription>
-            </CardHeader>
-          </Card>
+          <div key={lab.uid} className="relative rounded-xl overflow-hidden p-[1px]">
+            <Spotlight 
+              className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
+              size={64}
+            />
+            <Card className="overflow-hidden h-full flex flex-col py-4 relative bg-card/60 backdrop-blur-sm border border-muted">
+              <div className="px-4">
+                <AspectRatio ratio={16 / 9} className="bg-muted rounded-md overflow-hidden">
+                  {lab.cover ? (
+                    <Image
+                      src={lab.cover}
+                      alt={lab.title}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="flex h-full items-center justify-center bg-muted">
+                      <FlaskConicalIcon className="h-10 w-10 text-muted-foreground" />
+                    </div>
+                  )}
+                </AspectRatio>
+              </div>
+              <CardHeader>
+                <CardTitle>{lab.title}</CardTitle>
+                <CardDescription>{lab.description}</CardDescription>
+              </CardHeader>
+            </Card>
+          </div>
         ))}
       </div>
 

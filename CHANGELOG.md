@@ -15,6 +15,7 @@ just to make sure i was not sleeping all the time
 - added socials and filters
 - fixed bugs, added yaps-tooltip
 - added hackathon status (badges) to things
+- added timeline to experience page. it looks hyper cool.
 
 
 ### 2nd April, 2025

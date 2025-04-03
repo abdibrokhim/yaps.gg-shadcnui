@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/breadcrumb"
 import { Separator } from "@/components/ui/separator"
 import { SidebarTrigger } from "@/components/ui/sidebar"
-import { BookOpen, FlaskConicalIcon, LifeBuoy, Send, SquareTerminal, Boxes, Moon, Sun, Sparkles, MoonStar, SunDim } from "lucide-react"
+import { BookOpen, FlaskConicalIcon, LifeBuoy, Send, SquareTerminal, Boxes, Moon, Sun, Sparkles, MoonStar, SunDim, Briefcase, Backpack, Box } from "lucide-react"
 import Link from "next/link"
 import { useTheme } from "next-themes"
 import {
@@ -54,7 +54,13 @@ export default function PageHeader() {
         title: "Blog",
         icon: <BookOpen className="h-5 w-5" />,
       }
-    } else {
+    } else if (pathname.startsWith("/experience")) {
+      return {
+        title: "Experience",
+        icon: <Box className="h-5 w-5" />,
+      }
+    } 
+    else {
       return {
         title: "Playground",
         icon: <SquareTerminal className="h-5 w-5" />,
@@ -78,7 +84,7 @@ export default function PageHeader() {
   return (
     <header className="flex h-16 shrink-0 items-center gap-2 justify-between">
       <div className="flex items-center gap-2 px-4">
-        <SidebarTrigger className="-ml-1" />
+        <SidebarTrigger className="-ml-1 cursor-pointer" />
         <Separator
           orientation="vertical"
           className="mr-2 data-[orientation=vertical]:h-4"

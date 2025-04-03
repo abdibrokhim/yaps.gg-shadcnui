@@ -4,8 +4,10 @@ import * as React from "react"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import {
+  Backpack,
   BookOpen,
   Bot,
+  Box,
   Boxes,
   Command,
   FlaskConicalIcon,
@@ -65,6 +67,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         url: "/thing",
         icon: Boxes,
         isActive: pathname.startsWith("/thing"),
+      },
+      {
+        title: "Experience",
+        url: "/experience",
+        icon: Box,
+        isActive: pathname.startsWith("/experience"),
       },
     ],
     navSecondary: [
