@@ -1,6 +1,13 @@
 ## Changelog 
 
-just to make sure i was not sleeping all the time
+just to make sure i was not sleeping all the time.
+
+### 4th April, 2025
+- added timeline to experience page. it looks hyper cool.
+- added card hover effect. love pink color!!
+- filters are more cool now
+- spotlight effect on cards
+- added license and contributing guidelines
 
 ### 3rd April, 2025
 - added `thing` which is things i built during and not during hackathons
@@ -15,12 +22,6 @@ just to make sure i was not sleeping all the time
 - added socials and filters
 - fixed bugs, added yaps-tooltip
 - added hackathon status (badges) to things
-- added timeline to experience page. it looks hyper cool.
-- added card hover effect. love pink color!!
-- filters are more cool now
-- spotlight effect on cards
-
-
 
 ### 2nd April, 2025
 - release v0.0.0
