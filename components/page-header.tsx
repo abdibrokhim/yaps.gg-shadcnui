@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/breadcrumb"
 import { Separator } from "@/components/ui/separator"
 import { SidebarTrigger } from "@/components/ui/sidebar"
-import { BookOpen, FlaskConicalIcon, LifeBuoy, Send, SquareTerminal } from "lucide-react"
+import { BookOpen, FlaskConicalIcon, LifeBuoy, Send, SquareTerminal, Boxes } from "lucide-react"
 import Link from "next/link"
 
 export default function PageHeader() {
@@ -31,8 +31,13 @@ export default function PageHeader() {
       }
     } else if (pathname.startsWith("/lab")) {
       return {
-        title: "Lab",
+        title: "Labs",
         icon: <FlaskConicalIcon className="h-5 w-5" />,
+      }
+    } else if (pathname.startsWith("/thing")) {
+      return {
+        title: "Things",
+        icon: <Boxes className="h-5 w-5" />,
       }
     } else if (pathname.startsWith("/support")) {
       return {

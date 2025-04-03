@@ -5,6 +5,7 @@ import Image from "next/image"
 import {
   BookOpen,
   Bot,
+  Boxes,
   Command,
   FlaskConicalIcon,
   Frame,
@@ -44,7 +45,7 @@ const data = {
       isActive: true,
     },
     {
-      title: "Lab",
+      title: "Labs",
       url: "/lab",
       icon: FlaskConicalIcon,
     },
@@ -52,6 +53,11 @@ const data = {
       title: "Tutorials",
       url: "/tutorial",
       icon: BookOpen,
+    },
+    {
+      title: "Things",
+      url: "/thing",
+      icon: Boxes,
     },
   ],
   navSecondary: [
