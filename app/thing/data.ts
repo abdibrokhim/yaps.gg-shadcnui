@@ -25,6 +25,7 @@ export const THINGS: Thing[] = [
         url: 'https://yaps.gg/thing/take-trash',
         cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/48.png',
         youtube: 'https://www.youtube.com/watch?v=jh4Tf1nSteM',
+        github: 'https://github.com/abdibrokhim/Plant-Tree',
         hackathon: {
             winner: 'in-progress',
         },
@@ -37,6 +38,7 @@ export const THINGS: Thing[] = [
         url: 'https://stateless.vercel.app',
         cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/47.png',
         youtube: 'https://youtu.be/GSJxw_zi20w?si=mYWgIVluEj6rqNbK',
+        github: 'https://github.com/abdibrokhim/stateless',
     },
     {
         uid: 'thing-2',
@@ -46,6 +48,7 @@ export const THINGS: Thing[] = [
         url: 'https://yaps.chat',
         cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/43.png',
         youtube: 'https://youtu.be/hGyeKbRZFM8?si=gcO9LvOgOZQXVihh',
+        github: 'https://github.com/abdibrokhim/yaps.chat-with-prompt-kit',
     },
     {
         uid: 'thing-3',
@@ -55,6 +58,7 @@ export const THINGS: Thing[] = [
         url: 'https://notl.ink',
         cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/24.png',
         youtube: 'https://youtu.be/ahZV6aAdnVI?si=veM61ck14Y0UgFmR',
+        github: 'https://github.com/abdibrokhim/notlink',
         tutorial: '/tutorial/rust-url-shortener-shuttle',
         hackathon: {
             winner: 'winner',
@@ -69,7 +73,17 @@ export const THINGS: Thing[] = [
         url: 'https://yaps.lol',
         cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/49.png',
         youtube: 'https://www.youtube.com/watch?v=bGa2Y3kO4P8',
-        github: 'https://raw.githubusercontent.com/abdibrokhim/loom-dl-web'
+        github: 'https://github.com/abdibrokhim/loom-dl-web'
+    },
+    {
+        uid: 'thing-51',
+        title: 'yaps music',
+        description: 'playing random tracks from youtube',
+        link: '/thing/yaps-music',
+        url: 'https://yapsmusic.vercel.app',
+        cover: '',
+        youtube: 'https://www.youtube.com/watch?v=bGa2Y3kO4P8',
+        github: 'https://github.com/abdibrokhim/yaps.music'
     },
     {
         uid: 'thing-5',
@@ -79,6 +93,7 @@ export const THINGS: Thing[] = [
         url: 'https://justmakethings.cc',
         cover: '',
         youtube: 'https://www.youtube.com/watch?v=Qs1gdeOnPdI',
+        github: 'https://github.com/abdibrokhim/justmakethings',
     },
     {
         uid: 'thing-6',
@@ -87,6 +102,7 @@ export const THINGS: Thing[] = [
         link: '/thing/notgrep',
         url: 'https://notgrep.app',
         cover: '',
+        github: 'https://github.com/abdibrokhim/notgrep',
     },
     {
         uid: 'thing-7',
@@ -95,6 +111,7 @@ export const THINGS: Thing[] = [
         link: '/thing/open-notes',
         url: 'https://openotes.vercel.app',
         cover: '',
+        github: 'https://github.com/abdibrokhim/2025-stickies',
     },
     {
         uid: 'thing-8',
@@ -104,6 +121,7 @@ export const THINGS: Thing[] = [
         cover: '',
         youtube: 'https://www.youtube.com/watch?v=QzuHMTORsB8',
         tutorial: '/tutorial/90s-style-website-transformation',
+        github: 'https://github.com/abdibrokhim/neuronostalgia-hack24',
         hackathon: {
             winner: 'winner',
             prize: '$600',
@@ -115,6 +133,7 @@ export const THINGS: Thing[] = [
         description: 'Empowering Open Source AI with $TROC',
         link: '/thing/troc',
         cover: '',
+        github: 'https://github.com/theopencommunity',
     },
     {
         uid: 'thing-10',
@@ -124,6 +143,7 @@ export const THINGS: Thing[] = [
         url: 'https://chill-receipt.vercel.app/',
         cover: '',
         youtube: 'https://youtu.be/X1zcYETM2fw?si=u7C-9F735-lLt7WN',
+        github: 'https://github.com/abdibrokhim/chill-app',
     },
     {
         uid: 'thing-11',
@@ -133,7 +153,7 @@ export const THINGS: Thing[] = [
         url: 'https://sftf24.vercel.app/',
         cover: '',
         youtube: 'https://www.youtube.com/watch?v=CPGIUHaojVI',
-        github: 'https://raw.githubusercontent.com/abdibrokhim/sftf24-table-viz'
+        github: 'https://github.com/abdibrokhim/sftf24-table-viz'
     },
     {
         uid: 'thing-12',
@@ -143,6 +163,7 @@ export const THINGS: Thing[] = [
         url: 'https://comedai.vercel.app/',
         cover: '',
         youtube: 'https://www.youtube.com/watch?v=-umYRToyuQ4',
+        github: 'https://github.com/abdibrokhim/CoMed-web',
         hackathon: {
             winner: 'winner',
             prize: '$xxxxxx',
@@ -157,6 +178,7 @@ export const THINGS: Thing[] = [
         cover: '',
         youtube: 'https://www.youtube.com/watch?v=E7d1rLyXXVE',
         tutorial: '/tutorial/ai-sticker-maker-nextjs',
+        github: 'https://github.com/abdibrokhim/paper-ai-voice-assistant',
         hackathon: {
             winner: 'winner',
             prize: '$1600',
@@ -170,6 +192,7 @@ export const THINGS: Thing[] = [
         cover: '',
         youtube: 'https://www.youtube.com/watch?v=wyp8tRTLLfQ',
         tutorial: '/tutorial/ai-coding-interviewer-startup',
+        github: 'https://github.com/abdibrokhim/ai-coding-interviewer',
         hackathon: {
             winner: 'honorable-mention',
         },
@@ -183,6 +206,7 @@ export const THINGS: Thing[] = [
         cover: '',
         youtube: 'https://www.youtube.com/watch?v=CLrENdjIe58',
         tutorial: '/tutorial/ai-text-humanizer-nextjs',
+        github: 'https://github.com/abdibrokhim/humanaize',
         hackathon: {
             winner: 'winner',
             prize: '$1000',
@@ -196,7 +220,7 @@ export const THINGS: Thing[] = [
         url: 'https://ai-sticker-maker.vercel.app/',
         cover: '',
         tutorial: '/tutorial/ai-sticker-maker-nextjs',
-        github: 'https://raw.githubusercontent.com/abdibrokhim/ai-sticker-maker',
+        github: 'https://github.com/abdibrokhim/ai-sticker-maker',
     },
     {
         uid: 'thing-17',
@@ -207,7 +231,7 @@ export const THINGS: Thing[] = [
         cover: '',
         youtube: 'https://youtu.be/_wTaMLL4by0',
         tutorial: '/tutorial/chat-with-pdf-pinecone',
-        github: 'https://raw.githubusercontent.com/abdibrokhim/nextgen-o1',
+        github: 'https://github.com/abdibrokhim/nextgen-o1',
         hackathon: {
             winner: 'loser',
         },
@@ -220,7 +244,7 @@ export const THINGS: Thing[] = [
         url: 'https://monkeytypeai.vercel.app/',
         cover: '',
         youtube: 'https://youtu.be/SGibxV1YHDo',
-        github: 'https://raw.githubusercontent.com/abdibrokhim/monkeytype-ai/',
+        github: 'https://github.com/abdibrokhim/monkeytype-ai',
         hackathon: {
             winner: 'winner',
             prize: '$600',
@@ -234,7 +258,7 @@ export const THINGS: Thing[] = [
         url: 'https://langflow-4fi8.onrender.com/',
         cover: '',
         youtube: 'https://youtu.be/d9eJJHAp8v8',
-        github: 'https://raw.githubusercontent.com/abdibrokhim/langflow',
+        github: 'https://github.com/abdibrokhim/langflow',
         hackathon: {
             winner: 'winner',
             prize: '$800',
@@ -248,7 +272,7 @@ export const THINGS: Thing[] = [
         url: 'https://chatgpt.com/g/g-PRa3ZXK36-story-ai',
         cover: '',
         youtube: 'https://youtu.be/-IPLUUTiZak',
-        github: 'https://raw.githubusercontent.com/abdibrokhim/story-ai-chrome-extension',
+        github: 'https://github.com/abdibrokhim/story-ai-chrome-extension',
         hackathon: {
             winner: 'winner',
             prize: '$500',
@@ -274,7 +298,7 @@ export const THINGS: Thing[] = [
         url: 'https://ai-magic-flashcards.vercel.app/',
         cover: '',
         youtube: 'https://youtu.be/1NcGAoXCouM',
-        github: 'https://raw.githubusercontent.com/abdibrokhim/AI-Magic-FlashCards-with-Stripe',
+        github: 'https://github.com/abdibrokhim/AI-Magic-FlashCards-with-Stripe',
     },
     {
         uid: 'thing-23',
@@ -284,7 +308,7 @@ export const THINGS: Thing[] = [
         url: 'https://crunchgpt.vercel.app/',
         cover: '',
         youtube: 'https://youtu.be/AAy8ejtgBh4',
-        github: 'https://raw.githubusercontent.com/abdibrokhim/Chat-With-PDF-NextJS-Langchain-Pinecone-OpenAI',
+        github: 'https://github.com/abdibrokhim/Chat-With-PDF-NextJS-Langchain-Pinecone-OpenAI',
     },
     {
         uid: 'thing-24',
@@ -293,7 +317,7 @@ export const THINGS: Thing[] = [
         link: '/thing/harmony-quest',
         cover: '',
         youtube: "https://youtu.be/6opWWYy7yos",
-        github: "https://raw.githubusercontent.com/abdibrokhim/aiio",
+        github: "https://github.com/abdibrokhim/aiio",
         hackathon: {
             winner: 'loser',
         },
@@ -305,7 +329,7 @@ export const THINGS: Thing[] = [
         link: '/thing/mewellai',
         cover: '',
         youtube: "https://youtu.be/eTCg3pfm69o",
-        github: "https://raw.githubusercontent.com/abdibrokhim/mentalwellness",
+        github: "https://github.com/abdibrokhim/mentalwellness",
         hackathon: {
             winner: 'winner',
             prize: '$300',
@@ -327,7 +351,7 @@ export const THINGS: Thing[] = [
         url: 'https://pantry-tracker-ai.vercel.app/',
         cover: '',
         youtube: "https://youtu.be/YSgSCvTrcFU?si=fx40SVo8YBIFpqh9",
-        github: "https://raw.githubusercontent.com/abdibrokhim/pantry-tracker",
+        github: "https://github.com/abdibrokhim/pantry-tracker",
     },
     {
         uid: 'thing-28',
@@ -335,7 +359,7 @@ export const THINGS: Thing[] = [
         description: "Alert ME is a geolocation reporting app for the safety of users.",
         link: '/thing/alert-me',
         cover: '',
-        github: "https://raw.githubusercontent.com/abdibrokhim/Flutter-Send-Location-via-SMS",
+        github: "https://github.com/abdibrokhim/Flutter-Send-Location-via-SMS",
     },
     {
         uid: 'thing-29',
@@ -344,7 +368,7 @@ export const THINGS: Thing[] = [
         link: '/thing/chatgpt-rust-desktop-app',
         url: '',
         cover: '',
-        github: "https://raw.githubusercontent.com/abdibrokhim/ChatGPT4-Rust-Desktop-App",
+        github: "https://github.com/abdibrokhim/ChatGPT4-Rust-Desktop-App",
     },
     {
         uid: 'thing-30',
@@ -362,7 +386,7 @@ export const THINGS: Thing[] = [
         url: 'https://weshot.vercel.app/',
         cover: '',
         youtube: "https://youtu.be/GjeXKXisffQ?si=h1f-Ox6lo8a1wRa4",
-        github: "https://raw.githubusercontent.com/abdibrokhim/weshot",
+        github: "https://github.com/abdibrokhim/weshot",
         hackathon: {
             winner: 'loser',
         },
@@ -373,7 +397,7 @@ export const THINGS: Thing[] = [
         description: "Simple ChatGPT mobile app implementation using Flutter framework and Dart programming language. Supports all OpenAI LLMs via API.",
         link: '/thing/chatgpt-mobile-app',
         cover: '',
-        github: "https://raw.githubusercontent.com/abdibrokhim/ChatGPT3.5-Flutter-App",
+        github: "https://github.com/abdibrokhim/ChatGPT3.5-Flutter-App",
     },
     {
         uid: 'thing-33',
@@ -381,7 +405,7 @@ export const THINGS: Thing[] = [
         description: "Simple implementation of Debts tracker from different shops and markets.",
         link: '/thing/chatgpt-mobile-app',
         cover: '',
-        github: "https://raw.githubusercontent.com/abdibrokhim/qarzsiz",
+        github: "https://github.com/abdibrokhim/qarzsiz",
     },
     {
         uid: 'thing-34',
@@ -390,7 +414,7 @@ export const THINGS: Thing[] = [
         link: '/thing/flutter-cohere-package',
         url: 'https://pub.dev/packages/flutter_cohere',
         cover: '',
-        github: "https://raw.githubusercontent.com/abdibrokhim/flutter_cohere",
+        github: "https://github.com/abdibrokhim/flutter_cohere",
     },
     {
         uid: 'thing-35',
@@ -398,7 +422,7 @@ export const THINGS: Thing[] = [
         description: "Free AI voice cloning API implementation. Now Open Source.",
         link: '/thing/openvoice-api',
         cover: '',
-        github: "https://raw.githubusercontent.com/abdibrokhim/OpenVoice-API",
+        github: "https://github.com/abdibrokhim/OpenVoice-API",
     },
     {
         uid: 'thing-36',
@@ -407,7 +431,7 @@ export const THINGS: Thing[] = [
         link: '/thing/truck-reportme',
         cover: '',
         youtube: "https://youtu.be/9luZH0NjcR4?si=BFUbLOhl6wseBJ4t",
-        github: "https://raw.githubusercontent.com/abdibrokhim/monday.com-flutter-app-for-lgstcs",
+        github: "https://github.com/abdibrokhim/monday.com-flutter-app-for-lgstcs",
     },
     {
         uid: 'thing-37',
@@ -415,7 +439,7 @@ export const THINGS: Thing[] = [
         description: "Truck ReportMe is an App that Automates Truck Reports in Logistics. ",
         link: '/thing/openvoice-api',
         cover: '',
-        github: "https://raw.githubusercontent.com/abdibrokhim/TuckSimulator-unity",
+        github: "https://github.com/abdibrokhim/TuckSimulator-unity",
     },
     {
         uid: 'thing-38',
@@ -423,7 +447,7 @@ export const THINGS: Thing[] = [
         description: "Telegram Group Users Scraper is a Python script that scrapes users from a Telegram group using the Telethon library.",
         link: '/thing/telegram-group-users-scraper',
         cover: '',
-        github: "https://raw.githubusercontent.com/abdibrokhim/telethon-scraper",
+        github: "https://github.com/abdibrokhim/telethon-scraper",
     },
     {
         uid: 'thing-39',
@@ -431,7 +455,7 @@ export const THINGS: Thing[] = [
         description: "I tried to repeat BeatSaber VR Game using Unity. This was final University project, that got one of the highest marks.",
         link: '/thing/beat-saber-vr-game',
         cover: '',
-        github: "https://raw.githubusercontent.com/abdibrokhim/BeatSaber-VR-Game",
+        github: "https://github.com/abdibrokhim/BeatSaber-VR-Game",
     },
     {
         uid: 'thing-40',
@@ -439,7 +463,7 @@ export const THINGS: Thing[] = [
         description: "Monday.com native Web application (VSCode clone) that allows to run queries instantly. Now, you don't need to open Postman or Code editor to make queries to Monday.com API.",
         link: '/thing/monday-ai-assistant',
         cover: '',
-        github: "https://raw.githubusercontent.com/abdibrokhim/monday.com-ai-assistant-hackathon",
+        github: "https://github.com/abdibrokhim/monday.com-ai-assistant-hackathon",
         hackathon: {
             winner: 'loser',
         },
@@ -450,7 +474,7 @@ export const THINGS: Thing[] = [
         description: "An App where everyone can generate YouTube shorts or even long Videos in seconds.",
         link: '/thing/ytshorts',
         cover: '',
-        github: "https://raw.githubusercontent.com/abdibrokhim/ai-mental-health",
+        github: "https://github.com/abdibrokhim/ai-mental-health",
         hackathon: {
             winner: 'loser',
         },
@@ -461,7 +485,7 @@ export const THINGS: Thing[] = [
         description: "",
         link: '/thing/generate-deploy-nfts',
         cover: '',
-        github: "https://raw.githubusercontent.com/abdibrokhim/cw3d-AlchemySDK",
+        github: "https://github.com/abdibrokhim/cw3d-AlchemySDK",
         hackathon: {
             winner: 'unknown',
         },
@@ -472,7 +496,7 @@ export const THINGS: Thing[] = [
         description: "Comprehensive telegram bot. Built using ChatGPT API. Supports Django on backend. Has pricing options.",
         link: '/thing/chatgpt-telegram-bot',
         cover: '',
-        github: "https://raw.githubusercontent.com/abdibrokhim/ChatGPT-TelegramBot",
+        github: "https://github.com/abdibrokhim/ChatGPT-TelegramBot",
     },
     {
         uid: 'thing-44',
@@ -480,7 +504,7 @@ export const THINGS: Thing[] = [
         description: "Watching online lectures is convenient. But, makes it hard to engage with the material.",
         link: '/thing/lychee',
         cover: '',
-        github: "https://raw.githubusercontent.com/abdibrokhim/Lychee",
+        github: "https://github.com/abdibrokhim/Lychee",
         hackathon: {
             winner: 'loser',
         },
@@ -491,7 +515,7 @@ export const THINGS: Thing[] = [
         description: "",
         link: '/thing/no-code-customer-care-bot',
         cover: '',
-        github: "https://raw.githubusercontent.com/kuv7956/projectclippy",
+        github: "https://github.com/kuv7956/projectclippy",
         hackathon: {
             winner: 'loser',
         },
@@ -502,7 +526,7 @@ export const THINGS: Thing[] = [
         description: "",
         link: '/thing/report-cruncher',
         cover: '',
-        github: "https://raw.githubusercontent.com/LatVAlY/report-cruncher",
+        github: "https://github.com/LatVAlY/report-cruncher",
         hackathon: {
             winner: 'finalist',
         },
@@ -513,7 +537,7 @@ export const THINGS: Thing[] = [
         description: "",
         link: '/thing/glanz-fashion-beauty',
         cover: '',
-        github: "https://raw.githubusercontent.com/kuv7956/projectclippy",
+        github: "https://github.com/kuv7956/projectclippy",
     },
     {
         uid: 'thing-48',
@@ -522,7 +546,7 @@ export const THINGS: Thing[] = [
         link: '/thing/lexica-search-engine',
         url: 'https://lexica-search-engine.vercel.app/',
         cover: '',
-        github: "https://raw.githubusercontent.com/abdibrokhim/The-Stable-Diffusion-Search-Engine",
+        github: "https://github.com/abdibrokhim/The-Stable-Diffusion-Search-Engine",
     },
     {
         uid: 'thing-49',
