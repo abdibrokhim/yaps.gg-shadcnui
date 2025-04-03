@@ -83,7 +83,7 @@ export default function SocialsPage() {
     <div className="not-prose mx-auto">
         <Tabs defaultValue="active" className="space-y-0 mt-4">
           <div className="flex justify-between items-center">
-            <TabsList>
+            <TabsList className="flex flex-wrap">
               <TabsTrigger value="active" className="cursor-pointer">Active ({activeSocials.length})</TabsTrigger>
               <TabsTrigger value="inactive" className="cursor-pointer">Inactive ({inactiveSocials.length})</TabsTrigger>
             </TabsList>
@@ -156,17 +156,7 @@ export default function SocialsPage() {
 function SocialCard({ social }: { social: (typeof SOCIALS)[0] }) {
   const handleCopyUrl = () => {
     navigator.clipboard.writeText(social.url)    
-    toast(
-      "Copied to clipboard",
-      {
-        description: "Copied to clipboard",
-        action: {
-          label: "Yaps!",
-          onClick: () => console.log("dismiss"),
-        },
-        duration: 2000,
-      },
-    )
+    toast.success("Copied to clipboard")
   }
 
   return (

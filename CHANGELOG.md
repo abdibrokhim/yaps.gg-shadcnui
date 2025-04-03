@@ -2,6 +2,13 @@
 
 just to make sure i was not sleeping all the time.
 
+## v0.0.2
+
+### 4th April, 2025
+- made copy/sharing more accessible
+
+## v0.0.1
+
 ### 4th April, 2025
 - added timeline to experience page. it looks hyper cool.
 - added card hover effect. love pink color!!

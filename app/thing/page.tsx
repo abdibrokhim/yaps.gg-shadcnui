@@ -220,7 +220,7 @@ export default function ThingsPage() {
       <div className="not-prose">
         <Tabs defaultValue="all" className="w-full mt-4">
           <div className="flex justify-between items-center mb-4">
-            <TabsList>
+            <TabsList className="flex flex-wrap">
               <div className="flex justify-between items-center">
                 <TabsTrigger value="all" className="cursor-pointer">Show all</TabsTrigger>
                 <Button 

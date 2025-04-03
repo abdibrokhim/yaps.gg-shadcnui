@@ -13,47 +13,83 @@ import {
   Github, 
   PlayCircle,
   BookOpen,
-  ArrowLeft
+  ArrowLeft,
+  ChevronDown,
+  Share2
 } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
+import { TextMorph } from "@/components/motion-primitives/text-morph"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
-// Copy URL button component for thing pages
-function CopyButton() {
-  const [copied, setCopied] = useState(false)
+function ShareDropdown({ thing, onCopy }: { thing: Thing, onCopy: () => void }) {
   const currentUrl = typeof window !== 'undefined' ? window.location.href : ''
-
-  useEffect(() => {
-    if (copied) {
-      const timeout = setTimeout(() => {
-        setCopied(false)
-      }, 2000)
-      
-      return () => clearTimeout(timeout)
-    }
-  }, [copied])
-
+  
   return (
-    <Button 
-      variant="ghost" 
-      size="sm" 
-      className="flex gap-2 text-sm text-muted-foreground"
-      onClick={() => {
-        navigator.clipboard.writeText(currentUrl)
-        setCopied(true)
-      }}
-    >
-      {copied ? (
-        <>
-          <Check className="h-3.5 w-3.5" />
-          <span>Copied</span>
-        </>
-      ) : (
-        <>
-          <Copy className="h-3.5 w-3.5" />
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline" size="sm" className="flex items-center gap-1 cursor-pointer">
+          <Share2 className="h-4 w-4" />
+          <span>Share</span>
+          <ChevronDown className="h-3 w-3 ml-1" />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" className="w-56">
+        <DropdownMenuItem 
+          className="cursor-pointer"
+          onClick={onCopy}
+        >
+          <Copy className="mr-2 h-4 w-4" />
           <span>Copy URL</span>
-        </>
-      )}
-    </Button>
+        </DropdownMenuItem>
+        
+        <DropdownMenuSeparator />
+        
+        {thing.url && (
+          <DropdownMenuItem 
+            className="cursor-pointer"
+            onClick={() => handleExternalLink(thing.url)}
+          >
+            <ExternalLink className="mr-2 h-4 w-4" />
+            <span>Visit Website</span>
+          </DropdownMenuItem>
+        )}
+        
+        {thing.github && (
+          <DropdownMenuItem 
+            className="cursor-pointer"
+            onClick={() => handleExternalLink(thing.github)}
+          >
+            <Github className="mr-2 h-4 w-4" />
+            <span>GitHub Repository</span>
+          </DropdownMenuItem>
+        )}
+        
+        {thing.youtube && (
+          <DropdownMenuItem 
+            className="cursor-pointer"
+            onClick={() => handleExternalLink(thing.youtube)}
+          >
+            <PlayCircle className="mr-2 h-4 w-4" />
+            <span>YouTube Video</span>
+          </DropdownMenuItem>
+        )}
+        
+        {thing.tutorial && (
+          <DropdownMenuItem asChild>
+            <Link href={thing.tutorial} className="flex items-center">
+              <BookOpen className="mr-2 h-4 w-4" />
+              <span>View Tutorial</span>
+            </Link>
+          </DropdownMenuItem>
+        )}
+      </DropdownMenuContent>
+    </DropdownMenu>
   )
 }
 
@@ -82,6 +118,14 @@ interface ThingClientProps {
 export default function ThingClient({ thing }: ThingClientProps) {
   // Determine if we should show the iframe
   const showIframe = thing.url && thing.url.trim() !== '';
+  const [isCopied, setIsCopied] = useState(false);
+  
+  const handleCopy = () => {
+    const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
+    navigator.clipboard.writeText(currentUrl);
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 2000);
+  }
   
   return (
     <>
@@ -89,7 +133,7 @@ export default function ThingClient({ thing }: ThingClientProps) {
         <div className="flex flex-col gap-4">
           <div className="flex justify-between items-start">
             <h1 className="scroll-m-20 text-4xl font-bold tracking-tight">{thing.title}</h1>
-            <CopyButton />
+            <ShareDropdown thing={thing} onCopy={handleCopy} />
           </div>
           <p className="text-xl text-muted-foreground">{thing.description}</p>
           
@@ -104,50 +148,6 @@ export default function ThingClient({ thing }: ThingClientProps) {
                 />
               </AspectRatio>
             </div>
-          )}
-        </div>
-        
-        <div className="flex flex-wrap gap-2 mt-6">
-          {thing.url && (
-            <Button 
-              size="sm" 
-              variant="outline" 
-              className="cursor-pointer"
-              onClick={() => handleExternalLink(thing.url)}
-            >
-              Visit <ExternalLink className="ml-1 h-3 w-3" />
-            </Button>
-          )}
-          {thing.github && (
-            <Button 
-              size="sm" 
-              variant="outline" 
-              className="cursor-pointer"
-              onClick={() => handleExternalLink(thing.github)}
-            >
-              <Github className="mr-1 h-3 w-3" /> GitHub
-            </Button>
-          )}
-          {thing.youtube && (
-            <Button 
-              size="sm" 
-              variant="outline" 
-              className="cursor-pointer"
-              onClick={() => handleExternalLink(thing.youtube)}
-            >
-              <PlayCircle className="mr-1 h-3 w-3" /> YouTube
-            </Button>
-          )}
-          {thing.tutorial && (
-            <Link href={thing.tutorial}>
-              <Button 
-                size="sm" 
-                variant="outline" 
-                className="cursor-pointer"
-              >
-                <BookOpen className="mr-1 h-3 w-3" /> Tutorial
-              </Button>
-            </Link>
           )}
         </div>
         

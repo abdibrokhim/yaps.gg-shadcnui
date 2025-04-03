@@ -177,7 +177,7 @@ export default function TutorialsPage() {
   return (
     <div className="not-prose">
       <Tabs defaultValue="all" className="w-full mt-4">
-        <TabsList>
+        <TabsList className="flex flex-wrap">
           <div className="flex items-center">
             <TabsTrigger value="all" className="cursor-pointer">Show all</TabsTrigger>
             <Button 

@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/breadcrumb"
 import { Separator } from "@/components/ui/separator"
 import { SidebarTrigger } from "@/components/ui/sidebar"
-import { BookOpen, FlaskConicalIcon, LifeBuoy, Send, SquareTerminal, Boxes, Moon, Sun, Sparkles, MoonStar, SunDim, Briefcase, Backpack, Box } from "lucide-react"
+import { BookOpen, FlaskConicalIcon, LifeBuoy, Send, SquareTerminal, Boxes, Moon, Sun, Sparkles, MoonStar, SunDim, Briefcase, Backpack, Box, Frame } from "lucide-react"
 import Link from "next/link"
 import { useTheme } from "next-themes"
 import {
@@ -59,8 +59,12 @@ export default function PageHeader() {
         title: "Experience",
         icon: <Box className="h-5 w-5" />,
       }
-    } 
-    else {
+    } else if (pathname.startsWith("/socials")) {
+      return {
+        title: "Socials",
+        icon: <Frame className="h-5 w-5" />,
+      }
+    } else {
       return {
         title: "Playground",
         icon: <SquareTerminal className="h-5 w-5" />,
@@ -92,7 +96,7 @@ export default function PageHeader() {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem className="hidden md:block">
-              <BreadcrumbLink href="/">
+              <BreadcrumbLink href={pathname === "/" ? "/" : pathname.split("/")[1]}>
                 <div className="flex items-center gap-2">
                   {icon}
                   <span>{title}</span>
