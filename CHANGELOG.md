@@ -10,6 +10,7 @@ just to make sure i was not sleeping all the time
 - dropdown for selecting things
 - layout fixed
 - layout metadata updated
+- fixed shitty [slug] params issue
 
 
 ### 2nd April, 2025
