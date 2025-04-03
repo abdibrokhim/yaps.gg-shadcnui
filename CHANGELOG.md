@@ -4,6 +4,11 @@ just to make sure i was not sleeping all the time
 
 ### 3rd April, 2025
 - added `thing` which is things i built during and not during hackathons
+- added nextjs analytics
+- fixed ui/ux
+- tabs more cool now for filtering options
+- dropdown for selecting things
+- layout fixed
 
 ### 2nd April, 2025
 - release v0.0.0

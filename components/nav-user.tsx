@@ -1,11 +1,7 @@
 "use client"
 
 import {
-  BadgeCheck,
-  Bell,
   ChevronsUpDown,
-  CreditCard,
-  LogOut,
   Sparkles,
 } from "lucide-react"
 
@@ -89,7 +85,7 @@ export function NavUser({
               <DropdownMenuItem>
                 <Sparkles />
                 <Link href={SUBSCRIPTION_URL}>
-                  Gift me Croissant 🥐
+                  Donate
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuGroup>

@@ -15,6 +15,9 @@ const nextConfig = {
       {
         hostname: 'imagedelivery.net',
       },
+      {
+        hostname: 'raw.githubusercontent.com',
+      },
     ],
   },
 };

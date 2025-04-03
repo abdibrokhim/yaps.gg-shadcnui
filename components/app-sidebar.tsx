@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Image from "next/image"
+import { usePathname } from "next/navigation"
 import {
   BookOpen,
   Bot,
@@ -31,57 +32,63 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 
-const data = {
-  user: {
-    name: "abdibrokhim",
-    email: "abdibrokhim@gmail.com",
-    avatar: "/images/abdibrokhim.jpeg",
-  },
-  navMain: [
-    {
-      title: "Playground",
-      url: "/",
-      icon: SquareTerminal,
-      isActive: true,
-    },
-    {
-      title: "Labs",
-      url: "/lab",
-      icon: FlaskConicalIcon,
-    },
-    {
-      title: "Tutorials",
-      url: "/tutorial",
-      icon: BookOpen,
-    },
-    {
-      title: "Things",
-      url: "/thing",
-      icon: Boxes,
-    },
-  ],
-  navSecondary: [
-    {
-      title: "Support",
-      url: "/support",
-      icon: LifeBuoy,
-    },
-    {
-      title: "Feedback",
-      url: "/feedback",
-      icon: Send,
-    },
-  ],
-  projects: [
-    {
-      name: "Design Engineering",
-      url: "/projects/design-engineering",
-      icon: Frame,
-    },
-  ],
-}
-
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const pathname = usePathname()
+  
+  const data = {
+    user: {
+      name: "abdibrokhim",
+      email: "abdibrokhim@gmail.com",
+      avatar: "/images/abdibrokhim.jpeg",
+    },
+    navMain: [
+      {
+        title: "Playground",
+        url: "/",
+        icon: SquareTerminal,
+        isActive: pathname === "/",
+      },
+      {
+        title: "Labs",
+        url: "/lab",
+        icon: FlaskConicalIcon,
+        isActive: pathname.startsWith("/lab"),
+      },
+      {
+        title: "Tutorials",
+        url: "/tutorial",
+        icon: BookOpen,
+        isActive: pathname.startsWith("/tutorial"),
+      },
+      {
+        title: "Things",
+        url: "/thing",
+        icon: Boxes,
+        isActive: pathname.startsWith("/thing"),
+      },
+    ],
+    navSecondary: [
+      {
+        title: "Support",
+        url: "mailto:abdibrokhim@gmail.com",
+        icon: LifeBuoy,
+      },
+      {
+        title: "Feedback",
+        url: "mailto:abdibrokhim@gmail.com",
+        icon: Send,
+      },
+    ],
+    projects: [
+      {
+        name: "Design Engineering",
+        url: "/projects/design-engineering",
+        icon: Frame,
+        isActive: pathname.startsWith("/projects/design-engineering"),
+      },
+    ],
+  }
+
   return (
     <Sidebar variant="inset" {...props}>
       <SidebarHeader>
@@ -99,7 +106,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   />
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
-                  <span className="truncate font-medium">Yaps GG</span>
+                  <span className="truncate font-medium">Yaps World</span>
                   <span className="truncate text-xs">Enterprise</span>
                 </div>
               </a>
@@ -110,7 +117,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarContent>
         <NavMain items={data.navMain} />
         {/* <NavProjects projects={data.projects} /> */}
-        {/* <NavSecondary items={data.navSecondary} className="mt-auto" /> */}
+        <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />

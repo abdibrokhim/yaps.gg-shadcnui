@@ -12,9 +12,17 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Boxes, ExternalLink, PlayCircle, Github } from "lucide-react"
+import { Boxes, ExternalLink, PlayCircle, Github, BookOpen, Plus, ChevronRight } from "lucide-react"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { useState } from "react"
+import { Separator } from "@/components/ui/separator"
 
 // Type definitions to match data.ts
 type Thing = typeof THINGS[0];
@@ -41,7 +49,7 @@ function ThingCard({
   
   return (
     <Card 
-      className="py-4 h-full overflow-hidden transition-colors hover:bg-muted/50 cursor-pointer"
+      className="py-4 h-full overflow-hidden transition-colors hover:bg-muted/50 cursor-pointer flex flex-col"
       onClick={handleCardClick}
     >
       <div className="px-4">
@@ -60,61 +68,95 @@ function ThingCard({
           )}
         </AspectRatio>
       </div>
-      <CardHeader className="text-left px-4">
-        <CardTitle className="line-clamp-2">{thing.title}</CardTitle>
+      <CardHeader className="text-left px-4 flex-1">
+        <div className="flex items-center justify-between">
+          <CardTitle className="line-clamp-2">{thing.title}</CardTitle>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button size="icon" variant="ghost" className="rounded-full h-8 w-8 cursor-pointer" 
+                onClick={(e) => e.stopPropagation()}>
+                <Plus className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-48">
+              {thing.url && (
+                <DropdownMenuItem className="cursor-pointer" onClick={(e) => {
+                  e.stopPropagation();
+                  handleExternalLink(thing.url);
+                }}>
+                  <ExternalLink className="mr-2 h-4 w-4" /> Visit website
+                </DropdownMenuItem>
+              )}
+              {thing.youtube && (
+                <DropdownMenuItem className="cursor-pointer" onClick={(e) => {
+                  e.stopPropagation();
+                  handleExternalLink(thing.youtube);
+                }}>
+                  <PlayCircle className="mr-2 h-4 w-4" /> Watch on YouTube
+                </DropdownMenuItem>
+              )}
+              {thing.github && (
+                <DropdownMenuItem className="cursor-pointer" onClick={(e) => {
+                  e.stopPropagation();
+                  handleExternalLink(thing.github);
+                }}>
+                  <Github className="mr-2 h-4 w-4" /> Fork on GitHub
+                </DropdownMenuItem>
+              )}
+              {thing.tutorial && (
+                <DropdownMenuItem className="cursor-pointer" onClick={(e) => {
+                  e.stopPropagation();
+                  router.push(thing.tutorial!);
+                }}>
+                  <BookOpen className="mr-2 h-4 w-4" /> Read tutorial
+                </DropdownMenuItem>
+              )}
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
         <CardDescription className="line-clamp-3">
           {thing.description}
         </CardDescription>
       </CardHeader>
-      <CardFooter className="flex flex-wrap justify-start gap-2 px-4">
-        {thing.url && (
-          <Button size="sm" variant="outline" onClick={(e) => {
-            e.stopPropagation();
-            handleExternalLink(thing.url);
-          }}>
-            Visit <ExternalLink className="ml-1 h-3 w-3" />
-          </Button>
-        )}
-        {thing.youtube && (
-          <Button size="sm" variant="outline" onClick={(e) => {
-            e.stopPropagation();
-            handleExternalLink(thing.youtube);
-          }}>
-            <PlayCircle className="mr-1 h-3 w-3" /> YouTube
-          </Button>
-        )}
-        {thing.github && (
-          <Button size="sm" variant="outline" onClick={(e) => {
-            e.stopPropagation();
-            handleExternalLink(thing.github);
-          }}>
-            <Github className="mr-1 h-3 w-3" /> GitHub
-          </Button>
-        )}
-        {thing.tutorial && (
-          <Button size="sm" variant="outline" onClick={(e) => {
-            e.stopPropagation();
-            router.push(thing.tutorial!);
-          }}>
-            Tutorial
-          </Button>
-        )}
-      </CardFooter>
     </Card>
   );
 }
 
 export default function ThingsPage() {
+    const [showAllTabs, setShowAllTabs] = useState(false)
+
   // Sort things in ascending order (newest first)
   const sortedThings = [...THINGS];
-  const youtubeThings = sortedThings.filter(thing => thing.youtube)
+  const youtubeThings = sortedThings.filter(thing => thing.youtube);
+  const tutorialThings = sortedThings.filter(thing => thing.tutorial);
+  const githubThings = sortedThings.filter(thing => thing.github);
   
   return (
     <div className="not-prose">
       <Tabs defaultValue="all" className="w-full mt-4">
         <TabsList>
-          <TabsTrigger value="all">All Things</TabsTrigger>
-          <TabsTrigger value="videos">Videos</TabsTrigger>
+            <div className="flex items-center">
+                <TabsTrigger value="all" className="cursor-pointer">Show all</TabsTrigger>
+                <Button 
+                    variant="ghost" 
+                    size="icon" 
+                    className={`h-8 w-8 cursor-pointer 
+                        ${showAllTabs ? 'text-primary' : ''}
+                    `}
+                    onClick={() => setShowAllTabs(!showAllTabs)}
+                    >
+                    <ChevronRight className={`h-4 w-4 transition-transform duration-200 ${showAllTabs ? 'rotate-180' : ''}`} />
+                </Button>
+                </div>
+                
+                {showAllTabs && (
+                    <>
+                        <Separator orientation="vertical" />
+                        <TabsTrigger value="videos" className="cursor-pointer">YouTube videos</TabsTrigger>
+                        <TabsTrigger value="tutorials" className="cursor-pointer">Written tutorials</TabsTrigger>
+                        <TabsTrigger value="github" className="cursor-pointer">Source codes</TabsTrigger>
+                    </>
+                )}
         </TabsList>
         
         <TabsContent value="all" className="mt-6">
@@ -131,6 +173,28 @@ export default function ThingsPage() {
         <TabsContent value="videos" className="mt-6">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {youtubeThings.map((thing) => (
+              <ThingCard 
+                key={thing.uid} 
+                thing={thing}
+              />
+            ))}
+          </div>
+        </TabsContent>
+
+        <TabsContent value="tutorials" className="mt-6">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {tutorialThings.map((thing) => (
+              <ThingCard 
+                key={thing.uid} 
+                thing={thing}
+              />
+            ))}
+          </div>
+        </TabsContent>
+
+        <TabsContent value="github" className="mt-6">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {githubThings.map((thing) => (
               <ThingCard 
                 key={thing.uid} 
                 thing={thing}

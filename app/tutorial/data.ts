@@ -198,7 +198,7 @@ export const TUTORIALS: Tutorial[] = [
         description:
             'yaps[dot]chat is a new kind of messenger. You can easily chat, send files and images to anyone without middle man. all the messages and shared information end-to-end encrypted and never stored on the server.',
         link: '/tutorial/yaps-dot-chat',
-        cover: 'https://github.com/abdibrokhim/cover-images/blob/main/43.png',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/43.png',
         socials: {
             medium: '',
             dev: '',
@@ -266,7 +266,7 @@ export const TUTORIALS: Tutorial[] = [
         socials: {
             medium: 'https://medium.com/@abdibrokhim/building-a-chrome-extension-from-scratch-with-ai-ml-api-deepgram-aura-and-indexeddb-integration-2e5d1e6fbfb0',
             dev: 'https://dev.to/abdibrokhim/building-a-chrome-extension-from-scratch-with-aiml-api-deepgram-aura-and-indexeddb-integration-25hd',
-            github: 'https://github.com/TechWithAbee/Building-a-Chrome-Extension-from-Scratch-with-AI-ML-API-Deepgram-Aura-and-IndexDB-Integration',
+            github: 'https://raw.githubusercontent.com/TechWithAbee/Building-a-Chrome-Extension-from-Scratch-with-AI-ML-API-Deepgram-Aura-and-IndexDB-Integration',
             youtube: '',
             twitter: '',
             linkedin: '',
@@ -282,7 +282,7 @@ export const TUTORIALS: Tutorial[] = [
         socials: {
             medium: 'https://medium.com/@abdibrokhim/building-an-ai-sticker-maker-platform-with-ai-ml-api-next-js-8b0767a7e159',
             dev: 'https://dev.to/abdibrokhim/building-an-ai-sticker-maker-platform-with-aiml-api-nextjs-react-and-tailwind-css-using-openai-gpt-4o-and-dalle-3-models-46ip',
-            github: 'https://github.com/abdibrokhim/ai-sticker-maker/blob/main/TUTORIAL.md',
+            github: 'https://raw.githubusercontent.com/abdibrokhim/ai-sticker-maker/main/TUTORIAL.md',
             youtube: '',
             twitter: '',
             linkedin: '',
@@ -298,7 +298,7 @@ export const TUTORIALS: Tutorial[] = [
         socials: {
             medium: 'https://medium.com/@abdibrokhim/comprehensive-and-step-by-step-tutorial-on-building-an-ai-text-humanizer-with-ai-ml-api-next-js-d42c4850a31c',
             dev: 'https://dev.to/abdibrokhim/step-by-step-tutorial-on-building-an-ai-text-humanizer-with-aiml-api-and-integration-with-clerk-auth-and-deploying-to-vercel-moj',
-            github: 'https://github.com/abdibrokhim/humanaize/blob/main/TUTORIAL.md',
+            github: 'https://raw.githubusercontent.com/abdibrokhim/humanaize/main/TUTORIAL.md',
             youtube: 'https://youtu.be/CLrENdjIe58?si=694k_MrF6pBaplf7',
             twitter: '',
             linkedin: '',
@@ -314,7 +314,7 @@ export const TUTORIALS: Tutorial[] = [
         socials: {
             medium: 'https://medium.com/@abdibrokhim/lets-build-startup-2eb5ddfab4af',
             dev: 'https://dev.to/abdibrokhim/step-by-step-tutorial-on-building-ai-coding-interviewer-with-aiml-api-and-integration-with-clerk-367l',
-            github: 'https://github.com/abdibrokhim/ai-coding-interviewer/blob/main/TUTORIAL.md',
+            github: 'https://raw.githubusercontent.com/abdibrokhim/ai-coding-interviewer/main/TUTORIAL.md',
             youtube: 'https://youtu.be/qebSzqR7Tq4?si=NckCJRXIBpvqNxxc',
             twitter: '',
             linkedin: 'https://www.linkedin.com/posts/abdibrokhim_lets-build-a-startup-and-apply-to-y-combinator-activity-7264306363613265920-XhCL?utm_source=share&utm_medium=member_desktop&rcm=ACoAADt2h8MBtHotRGgb_ePOpWusMY9VKCqELw8',
@@ -330,7 +330,7 @@ export const TUTORIALS: Tutorial[] = [
         socials: {
             medium: 'https://medium.com/@abdibrokhim/building-chat-with-pdf-from-scratch-with-advanced-ai-ml-api-and-pinecone-leading-vector-database-2dbdb6b3e470',
             dev: 'https://dev.to/abdibrokhim/building-chat-with-pdf-from-scratch-with-advanced-aiml-api-and-pinecone-leading-vector-database-3o7m',
-            github: 'https://github.com/abdibrokhim/nextgen-o1/blob/main/TUTORIAL.md',
+            github: 'https://raw.githubusercontent.com/abdibrokhim/nextgen-o1/main/TUTORIAL.md',
             youtube: 'https://youtu.be/_wTaMLL4by0?si=LsUizYox8IjAx36z',
             twitter: '',
             linkedin: 'https://www.linkedin.com/posts/abdibrokhim_building-chat-with-pdf-eg-nextgen-o1-activity-7268279006490185728-T1Zb?utm_source=share&utm_medium=member_desktop&rcm=ACoAADt2h8MBtHotRGgb_ePOpWusMY9VKCqELw8',
@@ -346,7 +346,7 @@ export const TUTORIALS: Tutorial[] = [
         socials: {
             medium: 'https://medium.com/@abdibrokhim/building-a-tool-that-transforms-modern-websites-into-authentic-90s-style-designs-while-preserving-95a835b5b7a0',
             dev: 'https://dev.to/abdibrokhim/building-a-tool-that-transforms-modern-websites-into-authentic-90s-style-designs-using-aiml-api-5ame',
-            github: 'https://github.com/abdibrokhim/neuronostalgia-hack24/blob/main/TUTORIAL.md',
+            github: 'https://raw.githubusercontent.com/abdibrokhim/neuronostalgia-hack24/main/TUTORIAL.md',
             youtube: 'https://youtu.be/QzuHMTORsB8?si=gqkj927Dp0TRxMm8',
             twitter: '',
             linkedin: 'https://www.linkedin.com/posts/abdibrokhim_new-tutorial-with-aiml-api-learn-to-activity-7275479646672998400-q_Sz?utm_source=share&utm_medium=member_desktop&rcm=ACoAADt2h8MBtHotRGgb_ePOpWusMY9VKCqELw8',
@@ -358,11 +358,11 @@ export const TUTORIALS: Tutorial[] = [
         description:
             'Step-by-step tutorial on creating a Gradio-based AI Email Crafting Tool. Leverage AI/ML API and OpenAI for hyper-personalized outreach.',
         link: '/tutorial/ai-agent-high-converting-emails',
-        cover: 'https://github.com/abdibrokhim/cover-images/blob/main/25.png',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/25.png',
         socials: {
             medium: 'https://medium.com/@abdibrokhim/step-by-step-guide-building-an-ai-agent-to-craft-high-converting-emails-with-ai-ml-api-2025-cb68213204f4',
             dev: 'https://dev.to/abdibrokhim/step-by-step-guide-building-an-ai-agent-to-craft-high-converting-emails-with-aiml-api-2025-49bc',
-            github: 'https://huggingface.co/spaces/AimlAPI/EmailAgent/blob/main/TUTORIAL.md',
+            github: 'https://huggingface.co/spaces/AimlAPI/EmailAgent/main/TUTORIAL.md',
             youtube: 'https://www.youtube.com/watch?v=2FDoN_w7Uz0',
             twitter: '',
             linkedin: 'https://www.linkedin.com/posts/abdibrokhim_ai-agents-tutorial-out-now-using-chatgpt-activity-7292657697517137920-EJN3?utm_source=share&utm_medium=member_desktop&rcm=ACoAADt2h8MBtHotRGgb_ePOpWusMY9VKCqELw8',
@@ -374,7 +374,7 @@ export const TUTORIALS: Tutorial[] = [
         description:
             'Learn how to add Google Maps to Swift Playgrounds for interactive iOS experiences. Enhance your app with location-based features fast.',
         link: '/tutorial/google-maps-swift-playgrounds',
-        cover: 'https://github.com/abdibrokhim/cover-images/blob/main/36.png',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/36.png',
         socials: {
             medium: '',
             dev: '',
@@ -390,11 +390,11 @@ export const TUTORIALS: Tutorial[] = [
         description:
             'Follow a structured walkthrough to create Bagoodex—an open-source Perplexity-style app using Python, Gradio, and advanced AI/ML capabilities.',
         link: '/tutorial/open-source-perplexity-like-app',
-        cover: 'https://github.com/abdibrokhim/cover-images/blob/main/37.png',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/37.png',
         socials: {
             medium: '',
             dev: '',
-            github: 'https://huggingface.co/spaces/AimlAPI/Bagoodex-Web-Search/blob/main/TUTORIAL.md',
+            github: 'https://huggingface.co/spaces/AimlAPI/Bagoodex-Web-Search/main/TUTORIAL.md',
             youtube: 'https://youtu.be/A97hyCT5OF4?si=FztX1TmMqj3lHjSv',
             twitter: '',
             linkedin: 'https://www.linkedin.com/posts/abdibrokhim_try-bagoodex-web-search-like-perplexity-activity-7300523473028710400-TnuX?utm_source=share&utm_medium=member_desktop&rcm=ACoAADt2h8MBtHotRGgb_ePOpWusMY9VKCqELw8',
@@ -406,11 +406,11 @@ export const TUTORIALS: Tutorial[] = [
         description:
             'Create a knowledge-based AI voice agent using URL scraping, Pinecone vector database, OpenAI embeddings, and ElevenLabs for natural speech.',
         link: '/tutorial/ai-voice-agent-elevenlabs-pinecone-openai',
-        cover: 'https://github.com/abdibrokhim/cover-images/blob/main/39.png',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/39.png',
         socials: {
             medium: '',
             dev: '',
-            github: 'https://github.com/abdibrokhim/ai-voice-agent',
+            github: 'https://raw.githubusercontent.com/abdibrokhim/ai-voice-agent',
             youtube: 'https://www.youtube.com/watch?v=kVM_7m0iwrE',
             twitter: '',
             linkedin: 'https://www.linkedin.com/posts/abdibrokhim_ai-voice-agent-with-knowledge-base-integration-activity-7302248896058028032-GlFM?utm_source=share&utm_medium=member_desktop&rcm=ACoAADt2h8MBtHotRGgb_ePOpWusMY9VKCqELw8',
@@ -422,7 +422,7 @@ export const TUTORIALS: Tutorial[] = [
         description:
             'Discover how to leverage aiXplain as a powerful SEO keyword generator using AI Agent technology for precise content optimization.',
         link: '/tutorial/aixplain-seo-keyword-generator',
-        cover: 'https://github.com/abdibrokhim/cover-images/blob/main/41.png',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/41.png',
         socials: {
             medium: '',
             dev: '',
@@ -438,11 +438,11 @@ export const TUTORIALS: Tutorial[] = [
         description:
             'Build a ReplyGuy bot with AI/ML API and Twitter API V2. Explore AI Agents, Function Calling, and OpenAI Agents SDK for automated replies.',
         link: '/tutorial/twitter-replyguy-ai-ml',
-        cover: 'https://github.com/abdibrokhim/Twitter-ReplyGuy/blob/main/public/reply-guy-cover.png',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/Twitter-ReplyGuy/main/public/reply-guy-cover.png',
         socials: {
             medium: 'https://medium.com/@abdibrokhim/tutorial-build-a-twitter-replyguy-using-ai-ml-api-and-twitter-api-v2-c71a03426359',
             dev: 'https://dev.to/abdibrokhim/build-a-twitter-replyguy-using-aiml-api-and-twitter-api-v2-3c3j',
-            github: 'https://github.com/abdibrokhim/Twitter-ReplyGuy/blob/main/TUTORIAL.md',
+            github: 'https://raw.githubusercontent.com/abdibrokhim/Twitter-ReplyGuy/main/TUTORIAL.md',
             youtube: '',
             twitter: 'https://x.com/abdibrokhim/status/1904474811666985301',
             linkedin: 'https://www.linkedin.com/posts/abdibrokhim_yo-wanna-blow-up-on-twitter-without-grindin-activity-7310358499677364224-W3kj?utm_source=share&utm_medium=member_desktop&rcm=ACoAADt2h8MBtHotRGgb_ePOpWusMY9VKCqELw8',
@@ -454,11 +454,11 @@ export const TUTORIALS: Tutorial[] = [
         description:
             'Learn step-by-step to create notlink—an open-source, lightning-fast Rust URL shortener. Perfect for Rust enthusiasts seeking quick deployment.',
         link: '/tutorial/rust-url-shortener-shuttle',
-        cover: 'https://github.com/abdibrokhim/notlink/blob/main/assets/cover.png',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/notlink/main/assets/cover.png',
         socials: {
             medium: '',
             dev: '',
-            github: 'https://github.com/abdibrokhim/notlink/blob/main/TUTORIAL.md',
+            github: 'https://raw.githubusercontent.com/abdibrokhim/notlink/main/TUTORIAL.md',
             youtube: 'https://www.youtube.com/watch?v=Mhz_eVH3XnQ',
             twitter: '',
             linkedin: 'https://www.linkedin.com/posts/opencommunity_just-uploaded-my-first-ever-rust-video-tutorial-activity-7296255009766170624-VhAt?utm_source=share&utm_medium=member_desktop&rcm=ACoAADt2h8MBtHotRGgb_ePOpWusMY9VKCqELw8',

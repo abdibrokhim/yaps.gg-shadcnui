@@ -14,7 +14,9 @@ import {
   Check,
   ExternalLink, 
   Github, 
-  PlayCircle
+  PlayCircle,
+  BookOpen,
+  ArrowLeft
 } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 
@@ -111,6 +113,7 @@ export default function ThingPage({ params }: { params: { slug: string } }) {
             <Button 
               size="sm" 
               variant="outline" 
+              className="cursor-pointer"
               onClick={() => handleExternalLink(thing.url)}
             >
               Visit <ExternalLink className="ml-1 h-3 w-3" />
@@ -120,6 +123,7 @@ export default function ThingPage({ params }: { params: { slug: string } }) {
             <Button 
               size="sm" 
               variant="outline" 
+              className="cursor-pointer"
               onClick={() => handleExternalLink(thing.github)}
             >
               <Github className="mr-1 h-3 w-3" /> GitHub
@@ -129,6 +133,7 @@ export default function ThingPage({ params }: { params: { slug: string } }) {
             <Button 
               size="sm" 
               variant="outline" 
+              className="cursor-pointer"
               onClick={() => handleExternalLink(thing.youtube)}
             >
               <PlayCircle className="mr-1 h-3 w-3" /> YouTube
@@ -138,9 +143,10 @@ export default function ThingPage({ params }: { params: { slug: string } }) {
             <Button 
               size="sm" 
               variant="outline" 
+              className="cursor-pointer"
               onClick={() => router.push(thing.tutorial!)}
             >
-              Tutorial
+              <BookOpen className="mr-1 h-3 w-3" /> Tutorial
             </Button>
           )}
         </div>
@@ -160,10 +166,18 @@ export default function ThingPage({ params }: { params: { slug: string } }) {
           />
         </div>
       ) : (
-        <div className="flex items-center justify-center p-12 border rounded-lg bg-muted">
+        <div className="w-full h-full flex items-center justify-center p-12 border rounded-lg bg-muted">
           <div className="text-center text-muted-foreground">
             <Boxes className="w-12 h-12 mx-auto mb-4" />
             <p>No website available for this project</p>
+            <Button
+              variant="default"
+              size="sm"
+              className="mt-4 cursor-pointer"
+              onClick={() => router.back()}
+            >
+              <ArrowLeft className="mr-1 h-3 w-3" /> Back
+            </Button>
           </div>
         </div>
       )}
