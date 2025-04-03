@@ -16,6 +16,10 @@ just to make sure i was not sleeping all the time
 - fixed bugs, added yaps-tooltip
 - added hackathon status (badges) to things
 - added timeline to experience page. it looks hyper cool.
+- added card hover effect. love pink color!!
+- filters are more cool now
+- spotlight effect on cards
+
 
 
 ### 2nd April, 2025

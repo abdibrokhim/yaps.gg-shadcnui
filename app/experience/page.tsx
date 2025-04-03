@@ -29,6 +29,7 @@ type GridCell = {
   date: Date
   experiences: typeof EXPERIENCES
   isActive: boolean
+  matchesFilter: boolean
 }
 
 export default function ExperiencePage() {
@@ -77,32 +78,49 @@ export default function ExperiencePage() {
   
   const categories = extractCategories()
   
+  // Check if experience matches selected category
+  const matchesCategory = (exp: (typeof EXPERIENCES)[0], category: string | null) => {
+    if (!category) return true
+    
+    const positionLower = exp.metadata.position.toLowerCase()
+    
+    switch(category) {
+      case 'Leadership':
+        return positionLower.includes('founder') || positionLower.includes('ceo') || positionLower.includes('cto')
+      case 'Engineering':
+        return positionLower.includes('engineer') || positionLower.includes('developer')
+      case 'Mentorship':
+        return positionLower.includes('mentor') || positionLower.includes('facilitator')
+      case 'Research':
+        return positionLower.includes('researcher') || positionLower.includes('research')
+      case 'Internship':
+        return positionLower.includes('intern')
+      case 'Content Creation':
+        return positionLower.includes('content') || positionLower.includes('creator')
+      default:
+        return true
+    }
+  }
+  
   // Filter experiences by selected category
   const filteredExperiences = selectedCategory 
-    ? EXPERIENCES.filter(exp => {
-        const positionLower = exp.metadata.position.toLowerCase()
-        
-        switch(selectedCategory) {
-          case 'Leadership':
-            return positionLower.includes('founder') || positionLower.includes('ceo') || positionLower.includes('cto')
-          case 'Engineering':
-            return positionLower.includes('engineer') || positionLower.includes('developer')
-          case 'Mentorship':
-            return positionLower.includes('mentor') || positionLower.includes('facilitator')
-          case 'Research':
-            return positionLower.includes('researcher') || positionLower.includes('research')
-          case 'Internship':
-            return positionLower.includes('intern')
-          case 'Content Creation':
-            return positionLower.includes('content') || positionLower.includes('creator')
-          default:
-            return true
-        }
-    })
+    ? EXPERIENCES.filter(exp => matchesCategory(exp, selectedCategory))
     : EXPERIENCES
     
-  // Get color intensity based on number of experiences
-  const getCellColor = (count: number) => {
+  // Get color intensity based on number of experiences and filter match
+  const getCellColor = (cell: GridCell) => {
+    const { experiences, matchesFilter } = cell
+    const count = experiences.length
+    
+    // If cell has experiences matching the filter, highlight it with pink
+    if (count > 0 && matchesFilter && selectedCategory) {
+      if (count === 1) return 'bg-pink-500/30 hover:bg-pink-500/40 border-pink-500/50 shadow-sm shadow-pink-500/20'
+      if (count === 2) return 'bg-pink-500/40 hover:bg-pink-500/50 border-pink-500/60 shadow-sm shadow-pink-500/30'
+      if (count === 3) return 'bg-pink-500/50 hover:bg-pink-500/60 border-pink-500/70 shadow-sm shadow-pink-500/40'
+      return 'bg-pink-500/60 hover:bg-pink-500/70 border-pink-500/80 shadow-md shadow-pink-500/50'
+    }
+    
+    // Regular color intensity based on number of experiences
     if (count === 0) return 'bg-card hover:bg-muted/40 border-muted'
     if (count === 1) return 'bg-primary/20 hover:bg-primary/30 border-primary/40'
     if (count === 2) return 'bg-primary/40 hover:bg-primary/50 border-primary/60'
@@ -116,7 +134,7 @@ export default function ExperiencePage() {
     let minDate = new Date()
     let maxDate = new Date('2020-01-01')
     
-    filteredExperiences.forEach(exp => {
+    EXPERIENCES.forEach(exp => {
       const startDate = new Date(exp.metadata.startDate)
       const endDate = exp.metadata.endDate === 'Present' 
         ? new Date() 
@@ -148,7 +166,7 @@ export default function ExperiencePage() {
         const cellDate = new Date(year, month, 1)
         
         // Find all experiences active during this month
-        const activeExperiences = filteredExperiences.filter(exp => {
+        const activeExperiences = EXPERIENCES.filter(exp => {
           const startDate = new Date(exp.metadata.startDate)
           const endDate = exp.metadata.endDate === 'Present' 
             ? new Date() 
@@ -160,11 +178,17 @@ export default function ExperiencePage() {
             (endDate >= new Date(year, month + 1, 0)) // Last day of month
           )
         })
+
+        // Check if any experience in this cell matches the selected filter
+        const hasMatchingExperience = activeExperiences.some(exp => 
+          matchesCategory(exp, selectedCategory)
+        )
         
         yearRow.push({
           date: cellDate,
           experiences: activeExperiences,
-          isActive: activeExperiences.length > 0
+          isActive: activeExperiences.length > 0,
+          matchesFilter: hasMatchingExperience
         })
       }
       
@@ -172,7 +196,7 @@ export default function ExperiencePage() {
     }
     
     setGrid(newGrid)
-  }, [filteredExperiences])
+  }, [EXPERIENCES, selectedCategory]) // Rebuild grid when filter changes
   
   // Handle cell click
   const handleCellClick = (cell: GridCell) => {
@@ -227,7 +251,7 @@ export default function ExperiencePage() {
           </DropdownMenu>
         </div>
         
-        <div className="flex items-center gap-3 text-sm text-muted-foreground">
+        <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
           <div className="flex items-center gap-1.5">
             <div className="w-3 h-3 rounded-sm bg-card border"></div>
             <span>No activity</span>
@@ -248,6 +272,12 @@ export default function ExperiencePage() {
             <div className="w-3 h-3 rounded-sm bg-primary border border-primary"></div>
             <span>4+ roles</span>
           </div>
+          {selectedCategory && (
+            <div className="flex items-center gap-1.5 ml-2">
+              <div className="w-3 h-3 rounded-sm bg-pink-500/40 border border-pink-500/60 shadow-sm shadow-pink-500/30"></div>
+              <span>Matches filter</span>
+            </div>
+          )}
         </div>
       </div>
       
@@ -280,7 +310,7 @@ export default function ExperiencePage() {
                       {cell.experiences.length > 0 ? (
                         <ul className="mt-1 space-y-1">
                           {cell.experiences.map((exp, i) => (
-                            <li key={i}>
+                            <li key={i} className={matchesCategory(exp, selectedCategory) && selectedCategory ? "text-pink-400" : ""}>
                               <span className="font-medium">{exp.title}</span>
                               <span className="text-muted"> - {exp.metadata.position}</span>
                             </li>
@@ -293,7 +323,7 @@ export default function ExperiencePage() {
                   }
                 >
                   <div 
-                    className={`w-full aspect-square rounded-sm cursor-pointer transition-colors duration-200 border ${getCellColor(cell.experiences.length)}`}
+                    className={`w-full aspect-square rounded-sm cursor-pointer transition-all duration-300 border ${getCellColor(cell)}`}
                     onClick={() => handleCellClick(cell)}
                   ></div>
                 </YapsTooltip>
@@ -327,16 +357,30 @@ export default function ExperiencePage() {
             
             <div className="space-y-6">
               {selectedCell.experiences.map((experience) => (
-                <div key={experience.uid} className="relative rounded-lg overflow-hidden p-[1px]">
+                <div 
+                  key={experience.uid} 
+                  className={`relative rounded-xl overflow-hidden p-[1px] ${
+                    matchesCategory(experience, selectedCategory) && selectedCategory 
+                      ? "ring-2 ring-pink-500/50 ring-offset-1 ring-offset-background" 
+                      : ""
+                  }`}
+                >
                   <Spotlight 
-                    className="from-primary/20 via-primary/10 to-transparent blur-2xl"
+                    className={
+                      matchesCategory(experience, selectedCategory) && selectedCategory
+                        ? "from-pink-500/30 via-pink-500/20 to-transparent blur-2xl"
+                        : "from-primary/20 via-primary/10 to-transparent blur-2xl"
+                    }
                     size={200}
                   />
                   <Card className="w-full">
                     <CardHeader>
                       <div className="flex justify-between items-start">
                         <CardTitle>{experience.title}</CardTitle>
-                        <Badge variant="outline">
+                        <Badge 
+                          variant={matchesCategory(experience, selectedCategory) && selectedCategory ? "default" : "outline"}
+                          className={matchesCategory(experience, selectedCategory) && selectedCategory ? "bg-pink-500 hover:bg-pink-500/90 text-white" : ""}
+                        >
                           {experience.metadata.endDate ? 
                             `${experience.metadata.startDate} - ${experience.metadata.endDate}` : 
                             experience.metadata.startDate
@@ -371,14 +415,30 @@ export default function ExperiencePage() {
                     
                     <CardFooter>
                       {experience.url ? (
-                        <Button variant="outline" asChild className="w-full">
+                        <Button 
+                          variant="outline" 
+                          asChild 
+                          className={`w-full ${
+                            matchesCategory(experience, selectedCategory) && selectedCategory 
+                              ? "border-pink-500/50 hover:bg-pink-500/10" 
+                              : ""
+                          }`}
+                        >
                           <a href={experience.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between">
                             <span>Visit Website</span>
                             <ExternalLink className="h-4 w-4" />
                           </a>
                         </Button>
                       ) : experience.link ? (
-                        <Button variant="outline" asChild className="w-full">
+                        <Button 
+                          variant="outline" 
+                          asChild 
+                          className={`w-full ${
+                            matchesCategory(experience, selectedCategory) && selectedCategory 
+                              ? "border-pink-500/50 hover:bg-pink-500/10" 
+                              : ""
+                          }`}
+                        >
                           <Link href={experience.link} className="flex items-center justify-between">
                             <span>Learn More</span>
                             <ChevronRight className="h-4 w-4" />
