@@ -30,10 +30,73 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Yaps - Playground',
-  description:
-    'Yaps - Playground',
-}
+  title: "Yaps World",
+  description: "Yaps World",
+  metadataBase: new URL("https://yaps.gg/"),
+  keywords: ["ai builder", "youtube creator", "open-source builder", "open-source"],
+  
+  alternates: {
+    canonical: "/",
+  },
+
+  authors: [
+    {
+      name: "Ibrohim Abdivokhidov",
+      url: "https://github.com/abdibrokhim",
+    },
+  ],
+
+  openGraph: {
+    title: "Yaps World",
+    description: "Yaps World",
+    type: "website",
+    url: "/",
+    images: [
+      {
+        url: "/images/yapsdotgg.png",
+        width: 1200,
+        height: 630,
+        alt: "OG Image",
+      },
+    ],
+  },
+  
+  icons: {
+    icon: '/favicon.ico',
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+    title: "Yaps World",
+    description: "Yaps World",
+    images: ['/images/yapsdotgg.png'],
+    site: '@abdibrokhim',
+    creator: '@abdibrokhim',
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+    },
+  },
+
+  appleWebApp: {
+    title: 'Yaps World',
+    statusBarStyle: 'black-translucent',
+  },
+  
+  appLinks: {
+    web: {
+      url: 'https://yaps.gg',
+      should_fallback: true,
+    },
+  },
+};
 
 const geist = Geist({
   variable: '--font-geist',
@@ -56,7 +119,7 @@ export default function RootLayout({
       <body className={cn('min-h-screen bg-sidebar font-sans antialiased overflow-x-hidden', geist.variable, geistMono.variable)}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >

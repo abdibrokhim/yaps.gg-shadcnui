@@ -2,6 +2,7 @@
 
 import {
   ChevronsUpDown,
+  LucideSunDim,
   Sparkles,
 } from "lucide-react"
 
@@ -57,7 +58,7 @@ export function NavUser({
               </Avatar>
               <div className="grid flex-1 text-left text-sm leading-tight">
                 <span className="truncate font-medium">{user.name}</span>
-                <span className="truncate text-xs">{user.email}</span>
+                <span className="truncate text-xs text-primary/70">{user.email}</span>
               </div>
               <ChevronsUpDown className="ml-auto size-4" />
             </SidebarMenuButton>
@@ -76,7 +77,7 @@ export function NavUser({
                 </Avatar>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-medium">{user.name}</span>
-                  <span className="truncate text-xs">{user.email}</span>
+                  <span className="truncate text-xs text-primary/70">{user.email}</span>
                 </div>
               </div>
             </DropdownMenuLabel>
@@ -85,11 +86,30 @@ export function NavUser({
               <DropdownMenuItem>
                 <Sparkles />
                 <Link href={SUBSCRIPTION_URL}>
-                  Donate
+                  Donate & Support
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuGroup>
-            <DropdownMenuSeparator />
+            {/* <DropdownMenuSeparator /> */}
+            {/* <DropdownMenuGroup>
+              <DropdownMenuItem>
+                <BadgeCheck />
+                Account
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <CreditCard />
+                Billing
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Bell />
+                Notifications
+              </DropdownMenuItem>
+            </DropdownMenuGroup> */}
+            {/* <DropdownMenuSeparator />
+            <DropdownMenuItem>
+              <LucideSunDim />
+              Change theme
+            </DropdownMenuItem> */}
           </DropdownMenuContent>
         </DropdownMenu>
       </SidebarMenuItem>

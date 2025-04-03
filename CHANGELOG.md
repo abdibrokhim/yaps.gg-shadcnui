@@ -9,6 +9,8 @@ just to make sure i was not sleeping all the time
 - tabs more cool now for filtering options
 - dropdown for selecting things
 - layout fixed
+- layout metadata updated
+
 
 ### 2nd April, 2025
 - release v0.0.0

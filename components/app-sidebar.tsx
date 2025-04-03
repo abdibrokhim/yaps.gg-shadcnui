@@ -81,10 +81,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     ],
     projects: [
       {
-        name: "Design Engineering",
-        url: "/projects/design-engineering",
+        name: "I'm viral on socials",
+        url: "/socials",
         icon: Frame,
-        isActive: pathname.startsWith("/projects/design-engineering"),
+        isActive: pathname.startsWith("/socials"),
       },
     ],
   }
@@ -107,7 +107,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 </div>
                 <div className="grid flex-1 text-left text-sm leading-tight">
                   <span className="truncate font-medium">Yaps World</span>
-                  <span className="truncate text-xs">Enterprise</span>
+                  <span className="truncate text-xs text-primary/70">Probably Enterprise</span>
                 </div>
               </a>
             </SidebarMenuButton>
@@ -116,7 +116,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        {/* <NavProjects projects={data.projects} /> */}
+        <NavProjects projects={data.projects} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
