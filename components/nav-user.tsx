@@ -2,6 +2,8 @@
 
 import {
   ChevronsUpDown,
+  GitFork,
+  HandHeart,
   LucideSunDim,
   Sparkles,
 } from "lucide-react"
@@ -29,7 +31,6 @@ import {
 
 import Link from "next/link"
 import { SUBSCRIPTION_URL } from "@/lib/constants"
-import { useTheme } from "next-themes"
 
 export function NavUser({
   user,
@@ -41,7 +42,6 @@ export function NavUser({
   }
 }) {
   const { isMobile } = useSidebar()
-  const { theme, setTheme } = useTheme()
 
   return (
     <SidebarMenu>
@@ -82,34 +82,32 @@ export function NavUser({
               </div>
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
-            <DropdownMenuGroup>
+            {/* <DropdownMenuGroup>
               <DropdownMenuItem>
-                <Sparkles />
+                <HandHeart />
                 <Link href={SUBSCRIPTION_URL}>
                   Donate & Support
                 </Link>
               </DropdownMenuItem>
-            </DropdownMenuGroup>
-            {/* <DropdownMenuSeparator /> */}
-            {/* <DropdownMenuGroup>
-              <DropdownMenuItem>
-                <BadgeCheck />
-                Account
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <CreditCard />
-                Billing
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <Bell />
-                Notifications
-              </DropdownMenuItem>
             </DropdownMenuGroup> */}
-            {/* <DropdownMenuSeparator />
+            {/* <DropdownMenuSeparator /> */}
+            <DropdownMenuGroup>
+              <DropdownMenuItem>
+                <GitFork />
+                Fork this thing
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Sparkles />
+                Give a Star
+              </DropdownMenuItem>
+            </DropdownMenuGroup>
+            <DropdownMenuSeparator />
             <DropdownMenuItem>
-              <LucideSunDim />
-              Change theme
-            </DropdownMenuItem> */}
+              <HandHeart />
+                <Link href={SUBSCRIPTION_URL}>
+                  Donate & Support
+                </Link>
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       </SidebarMenuItem>

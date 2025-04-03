@@ -1,6 +1,8 @@
 "use client"
 
 import {
+  Bomb,
+  BrainCircuitIcon,
   Folder,
   MoreHorizontal,
   Share,
@@ -38,7 +40,7 @@ export function NavProjects({
 
   return (
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
-      <SidebarGroupLabel>Projects</SidebarGroupLabel>
+      <SidebarGroupLabel>Stuff</SidebarGroupLabel>
       <SidebarMenu>
         {projects.map((item) => (
           <SidebarMenuItem key={item.name}>
@@ -50,7 +52,7 @@ export function NavProjects({
             </SidebarMenuButton>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <SidebarMenuAction showOnHover>
+                <SidebarMenuAction showOnHover className="cursor-pointer">
                   <MoreHorizontal />
                   <span className="sr-only">More</span>
                 </SidebarMenuAction>
@@ -60,18 +62,15 @@ export function NavProjects({
                 side={isMobile ? "bottom" : "right"}
                 align={isMobile ? "end" : "start"}
               >
-                <DropdownMenuItem>
-                  <Folder className="text-muted-foreground" />
-                  <span>View Project</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Share className="text-muted-foreground" />
-                  <span>Share Project</span>
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem>
-                  <Trash2 className="text-muted-foreground" />
-                  <span>Delete Project</span>
+                <DropdownMenuItem
+                  className="cursor-pointer"
+                  onClick={() => {
+                    const text = "i just exploded this dude. lol. try yaps.gg"
+                    window.open(`https://x.com/intent/post?text=${encodeURIComponent(text)}`, '_blank');
+                  }}
+                >
+                  <Bomb className="text-muted-foreground" />
+                  <span>Explode this dude</span>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>

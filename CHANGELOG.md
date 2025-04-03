@@ -11,6 +11,9 @@ just to make sure i was not sleeping all the time
 - layout fixed
 - layout metadata updated
 - fixed shitty [slug] params issue
+- added theme
+- added socials and filters
+- fixed bugs, added yaps-tooltip
 
 
 ### 2nd April, 2025

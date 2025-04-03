@@ -22,6 +22,7 @@ import { SquareTerminal } from "lucide-react"
 import Link from "next/link"
 import PageHeader from "@/components/page-header"
 import { cn } from "@/lib/utils"
+import { Toaster } from 'sonner'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -114,7 +115,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html className='bg-sidebar' lang="en" suppressHydrationWarning>
       <head />
       <body className={cn('min-h-screen bg-sidebar font-sans antialiased overflow-x-hidden', geist.variable, geistMono.variable)}>
         <ThemeProvider
@@ -134,6 +135,7 @@ export default function RootLayout({
           </SidebarProvider>
         </ThemeProvider>
         <Analytics />
+        <Toaster theme='dark' />
       </body>
     </html>
   )

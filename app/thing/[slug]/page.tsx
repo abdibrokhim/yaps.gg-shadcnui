@@ -16,5 +16,8 @@ export default async function ThingPage({ params: paramsPromise }: { params: Pro
     notFound();
   }
   
-  return <ThingClient thing={thing} />;
+  return <ThingClient thing={{
+    ...thing,
+    description: thing.description || '' // Ensure description is never undefined
+  }} />;
 }
