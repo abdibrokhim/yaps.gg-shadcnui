@@ -12,7 +12,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { BookOpen, ExternalLink, Github, Linkedin, PenBox, PlayCircle, Plus, Twitter, ChevronRight } from "lucide-react"
+import { BookOpen, ExternalLink, Github, Linkedin, PenBox, PlayCircle, Plus, Twitter, ChevronRight, ListCollapse } from "lucide-react"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {
@@ -83,7 +83,7 @@ function TutorialCard({
                 className="rounded-full h-8 w-8 cursor-pointer" 
                 onClick={(e) => e.stopPropagation()}
               >
-                <Plus className="h-4 w-4" />
+                <ListCollapse className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-48">

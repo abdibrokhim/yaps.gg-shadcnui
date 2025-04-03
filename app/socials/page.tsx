@@ -16,7 +16,7 @@ import {
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { ChevronDown, ExternalLink, Filter } from "lucide-react"
+import { ChevronDown, ExternalLink, Filter, ListFilter } from "lucide-react"
 import { toast } from "sonner"
 import { useState } from "react"
 import {
@@ -80,9 +80,8 @@ export default function SocialsPage() {
     : inactiveSocials
   
   return (
-    <div className="container py-10 max-w-6xl mx-auto">
-      <div className="space-y-6">
-        <Tabs defaultValue="active" className="space-y-6 mt-4">
+    <div className="not-prose mx-auto">
+        <Tabs defaultValue="active" className="space-y-0 mt-4">
           <div className="flex justify-between items-center">
             <TabsList>
               <TabsTrigger value="active" className="cursor-pointer">Active ({activeSocials.length})</TabsTrigger>
@@ -92,7 +91,7 @@ export default function SocialsPage() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="outline" size="sm" className="gap-2">
-                  <Filter className="h-4 w-4" />
+                  <ListFilter className="h-4 w-4" />
                   {selectedCategory || "Filter by Category"}
                   <ChevronDown className="h-4 w-4" />
                 </Button>
@@ -150,7 +149,6 @@ export default function SocialsPage() {
             </div>
           </TabsContent>
         </Tabs>
-      </div>
     </div>
   )
 }

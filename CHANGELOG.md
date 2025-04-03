@@ -14,6 +14,7 @@ just to make sure i was not sleeping all the time
 - added theme
 - added socials and filters
 - fixed bugs, added yaps-tooltip
+- added hackathon status (badges) to things
 
 
 ### 2nd April, 2025

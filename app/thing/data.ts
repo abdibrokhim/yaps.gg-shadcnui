@@ -1,3 +1,8 @@
+export type Hackathon = {
+    winner: 'winner' | 'loser' | 'finalist' | 'in-progress' | 'honorable-mention' | 'unknown'
+    prize?: string
+}
+
 export type Thing = {
     uid: string
     title: string
@@ -8,6 +13,7 @@ export type Thing = {
     youtube?: string
     tutorial?: string
     github?: string
+    hackathon?: Hackathon
 }
 
 export const THINGS: Thing[] = [
@@ -19,6 +25,9 @@ export const THINGS: Thing[] = [
         url: 'https://yaps.gg/thing/take-trash',
         cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/48.png',
         youtube: 'https://www.youtube.com/watch?v=jh4Tf1nSteM',
+        hackathon: {
+            winner: 'in-progress',
+        },
     },
     {
         uid: 'thing-1',
@@ -47,6 +56,10 @@ export const THINGS: Thing[] = [
         cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/24.png',
         youtube: 'https://youtu.be/ahZV6aAdnVI?si=veM61ck14Y0UgFmR',
         tutorial: '/tutorial/rust-url-shortener-shuttle',
+        hackathon: {
+            winner: 'winner',
+            prize: '$600',
+        },
     },
     {
         uid: 'thing-4',
@@ -91,6 +104,10 @@ export const THINGS: Thing[] = [
         cover: '',
         youtube: 'https://www.youtube.com/watch?v=QzuHMTORsB8',
         tutorial: '/tutorial/90s-style-website-transformation',
+        hackathon: {
+            winner: 'winner',
+            prize: '$600',
+        },
     },
     {
         uid: 'thing-9',
@@ -126,6 +143,10 @@ export const THINGS: Thing[] = [
         url: 'https://comedai.vercel.app/',
         cover: '',
         youtube: 'https://www.youtube.com/watch?v=-umYRToyuQ4',
+        hackathon: {
+            winner: 'winner',
+            prize: '$xxxxxx',
+        },
     },
     {
         uid: 'thing-13',
@@ -136,6 +157,10 @@ export const THINGS: Thing[] = [
         cover: '',
         youtube: 'https://www.youtube.com/watch?v=E7d1rLyXXVE',
         tutorial: '/tutorial/ai-sticker-maker-nextjs',
+        hackathon: {
+            winner: 'winner',
+            prize: '$1600',
+        },
     },
     {
         uid: 'thing-14',
@@ -145,6 +170,9 @@ export const THINGS: Thing[] = [
         cover: '',
         youtube: 'https://www.youtube.com/watch?v=wyp8tRTLLfQ',
         tutorial: '/tutorial/ai-coding-interviewer-startup',
+        hackathon: {
+            winner: 'honorable-mention',
+        },
     },
     {
         uid: 'thing-15',
@@ -155,6 +183,10 @@ export const THINGS: Thing[] = [
         cover: '',
         youtube: 'https://www.youtube.com/watch?v=CLrENdjIe58',
         tutorial: '/tutorial/ai-text-humanizer-nextjs',
+        hackathon: {
+            winner: 'winner',
+            prize: '$1000',
+        },
     },
     {
         uid: 'thing-16',
@@ -176,6 +208,9 @@ export const THINGS: Thing[] = [
         youtube: 'https://youtu.be/_wTaMLL4by0',
         tutorial: '/tutorial/chat-with-pdf-pinecone',
         github: 'https://raw.githubusercontent.com/abdibrokhim/nextgen-o1',
+        hackathon: {
+            winner: 'loser',
+        },
     },
     {
         uid: 'thing-18',
@@ -186,6 +221,10 @@ export const THINGS: Thing[] = [
         cover: '',
         youtube: 'https://youtu.be/SGibxV1YHDo',
         github: 'https://raw.githubusercontent.com/abdibrokhim/monkeytype-ai/',
+        hackathon: {
+            winner: 'winner',
+            prize: '$600',
+        },
     },
     {
         uid: 'thing-19',
@@ -196,6 +235,10 @@ export const THINGS: Thing[] = [
         cover: '',
         youtube: 'https://youtu.be/d9eJJHAp8v8',
         github: 'https://raw.githubusercontent.com/abdibrokhim/langflow',
+        hackathon: {
+            winner: 'winner',
+            prize: '$800',
+        },
     },
     {
         uid: 'thing-20',
@@ -206,6 +249,10 @@ export const THINGS: Thing[] = [
         cover: '',
         youtube: 'https://youtu.be/-IPLUUTiZak',
         github: 'https://raw.githubusercontent.com/abdibrokhim/story-ai-chrome-extension',
+        hackathon: {
+            winner: 'winner',
+            prize: '$500',
+        },
     },
     {
         uid: 'thing-21',
@@ -215,6 +262,9 @@ export const THINGS: Thing[] = [
         url: 'https://chatgpt.com/g/g-rTTibE8p9-ecoshop-ai',
         cover: '',
         youtube: 'https://youtu.be/8GTJseYt7TA',
+        hackathon: {
+            winner: 'unknown',
+        },
     },
     {
         uid: 'thing-22',
@@ -244,6 +294,9 @@ export const THINGS: Thing[] = [
         cover: '',
         youtube: "https://youtu.be/6opWWYy7yos",
         github: "https://raw.githubusercontent.com/abdibrokhim/aiio",
+        hackathon: {
+            winner: 'loser',
+        },
     },
     {
         uid: 'thing-25',
@@ -253,6 +306,10 @@ export const THINGS: Thing[] = [
         cover: '',
         youtube: "https://youtu.be/eTCg3pfm69o",
         github: "https://raw.githubusercontent.com/abdibrokhim/mentalwellness",
+        hackathon: {
+            winner: 'winner',
+            prize: '$300',
+        },
     },
     {
         uid: 'thing-26',
@@ -306,6 +363,9 @@ export const THINGS: Thing[] = [
         cover: '',
         youtube: "https://youtu.be/GjeXKXisffQ?si=h1f-Ox6lo8a1wRa4",
         github: "https://raw.githubusercontent.com/abdibrokhim/weshot",
+        hackathon: {
+            winner: 'loser',
+        },
     },
     {
         uid: 'thing-32',
@@ -380,6 +440,9 @@ export const THINGS: Thing[] = [
         link: '/thing/monday-ai-assistant',
         cover: '',
         github: "https://raw.githubusercontent.com/abdibrokhim/monday.com-ai-assistant-hackathon",
+        hackathon: {
+            winner: 'loser',
+        },
     },
     {
         uid: 'thing-41',
@@ -388,6 +451,9 @@ export const THINGS: Thing[] = [
         link: '/thing/ytshorts',
         cover: '',
         github: "https://raw.githubusercontent.com/abdibrokhim/ai-mental-health",
+        hackathon: {
+            winner: 'loser',
+        },
     },
     {
         uid: 'thing-42',
@@ -396,6 +462,9 @@ export const THINGS: Thing[] = [
         link: '/thing/generate-deploy-nfts',
         cover: '',
         github: "https://raw.githubusercontent.com/abdibrokhim/cw3d-AlchemySDK",
+        hackathon: {
+            winner: 'unknown',
+        },
     },
     {
         uid: 'thing-43',
@@ -412,6 +481,9 @@ export const THINGS: Thing[] = [
         link: '/thing/lychee',
         cover: '',
         github: "https://raw.githubusercontent.com/abdibrokhim/Lychee",
+        hackathon: {
+            winner: 'loser',
+        },
     },
     {
         uid: 'thing-45',
@@ -420,6 +492,9 @@ export const THINGS: Thing[] = [
         link: '/thing/no-code-customer-care-bot',
         cover: '',
         github: "https://raw.githubusercontent.com/kuv7956/projectclippy",
+        hackathon: {
+            winner: 'loser',
+        },
     },
     {
         uid: 'thing-46',
@@ -428,10 +503,13 @@ export const THINGS: Thing[] = [
         link: '/thing/report-cruncher',
         cover: '',
         github: "https://raw.githubusercontent.com/LatVAlY/report-cruncher",
+        hackathon: {
+            winner: 'finalist',
+        },
     },
     {
         uid: 'thing-47',
-        title: "Glanz -Fashion & Beauty",
+        title: "Glanz - Fashion & Beauty",
         description: "",
         link: '/thing/glanz-fashion-beauty',
         cover: '',

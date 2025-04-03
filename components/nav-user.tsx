@@ -30,7 +30,7 @@ import {
 } from "@/components/ui/sidebar"
 
 import Link from "next/link"
-import { SUBSCRIPTION_URL } from "@/lib/constants"
+import { SUBSCRIPTION_URL, REPO_URL_FORK, REPO_URL_STAR } from "@/lib/constants"
 
 export function NavUser({
   user,
@@ -94,11 +94,15 @@ export function NavUser({
             <DropdownMenuGroup>
               <DropdownMenuItem>
                 <GitFork />
-                Fork this thing
+                <Link href={REPO_URL_FORK}>
+                  Fork this thing
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <Sparkles />
-                Give a Star
+                <Link href={REPO_URL_STAR}>
+                  Give a Star
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
