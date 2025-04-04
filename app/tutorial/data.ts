@@ -33,22 +33,6 @@ export type VideoTutorial = {
 // we should order them bottom to top while displaying them as a content
 export const TUTORIALS: Tutorial[] = [
     {
-        uid: 'blog-1',
-        title: 'Find the Largest Clique in Python Using NetworkX: A How-To',
-        description: 
-            'Learn to identify the largest clique in graph data with NetworkX. Step-by-step Python guide for advanced graph analysis and AI projects.',
-        link: '/tutorial/largest-clique-networkx-python',
-        cover: '',
-        socials: {
-            medium: 'https://medium.com/@abdibrokhim/how-to-find-largest-clique-using-networkx-in-python-174e62ac177b',
-            dev: '',
-            github: '',
-            youtube: '',
-            twitter: '',
-            linkedin: '',
-        },
-    },
-    {
         uid: 'blog-2',
         title: 'Build a Llama 2 App with Clarifai Integration: Step-by-Step',
         description:
@@ -193,22 +177,6 @@ export const TUTORIALS: Tutorial[] = [
         },
     },
     {
-        uid: 'blog-11',
-        title: 'yaps[dot]chat - one-time end-to-end encrypted anonymous chats',
-        description:
-            'yaps[dot]chat is a new kind of messenger. You can easily chat, send files and images to anyone without middle man. all the messages and shared information end-to-end encrypted and never stored on the server.',
-        link: '/tutorial/yaps-dot-chat',
-        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/43.png',
-        socials: {
-            medium: '',
-            dev: '',
-            github: '',
-            youtube: '',
-            twitter: '',
-            linkedin: '',
-        },
-    },
-    {
         uid: 'blog-12',
         title: 'Generative AI Studio by Google: Quick-Start Tutorial',
         description:
@@ -257,16 +225,48 @@ export const TUTORIALS: Tutorial[] = [
         },
     },
     {
+        uid: 'blog-1',
+        title: 'Find the Largest Clique in Python Using NetworkX: A How-To',
+        description: 
+            'Learn to identify the largest clique in graph data with NetworkX. Step-by-step Python guide for advanced graph analysis and AI projects.',
+        link: '/tutorial/largest-clique-networkx-python',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/42.png',
+        socials: {
+            medium: 'https://medium.com/@abdibrokhim/how-to-find-largest-clique-using-networkx-in-python-174e62ac177b',
+            dev: '',
+            github: '',
+            youtube: '',
+            twitter: '',
+            linkedin: '',
+        },
+    },
+    {
+        uid: 'blog-11',
+        title: 'yaps[dot]chat - one-time end-to-end encrypted anonymous chats',
+        description:
+            'yaps[dot]chat is a new kind of messenger. You can easily chat, send files and images to anyone without middle man. all the messages and shared information end-to-end encrypted and never stored on the server.',
+        link: '/tutorial/yaps-dot-chat',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/43.png',
+        socials: {
+            medium: '',
+            dev: '',
+            github: '',
+            youtube: '',
+            twitter: '',
+            linkedin: '',
+        },
+    },
+    {
         uid: 'blog-15',
         title: 'Build a Chrome Extension with AI/ML API, Deepgram Aura & IndexedDB',
         description:
             'From manifest setup to data storage, learn to build a Chrome extension using Deepgram Aura, AI/ML API, and IndexedDB integration.',
         link: '/tutorial/chrome-extension-deepgram-indexeddb',
-        cover: '',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/41.png',
         socials: {
             medium: 'https://medium.com/@abdibrokhim/building-a-chrome-extension-from-scratch-with-ai-ml-api-deepgram-aura-and-indexeddb-integration-2e5d1e6fbfb0',
             dev: 'https://dev.to/abdibrokhim/building-a-chrome-extension-from-scratch-with-aiml-api-deepgram-aura-and-indexeddb-integration-25hd',
-            github: 'https://raw.githubusercontent.com/TechWithAbee/Building-a-Chrome-Extension-from-Scratch-with-AI-ML-API-Deepgram-Aura-and-IndexDB-Integration',
+            github: 'https://github.com/TechWithAbee/Building-a-Chrome-Extension-from-Scratch-with-AI-ML-API-Deepgram-Aura-and-IndexDB-Integration',
             youtube: '',
             twitter: '',
             linkedin: '',
@@ -278,11 +278,11 @@ export const TUTORIALS: Tutorial[] = [
         description:
             'Build a platform to generate custom AI-driven stickers using AI/ML API, Next.js, React, Tailwind CSS, and DALL·E 3 for unique designs.',
         link: '/tutorial/ai-sticker-maker-nextjs',
-        cover: '',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/39.png',
         socials: {
             medium: 'https://medium.com/@abdibrokhim/building-an-ai-sticker-maker-platform-with-ai-ml-api-next-js-8b0767a7e159',
             dev: 'https://dev.to/abdibrokhim/building-an-ai-sticker-maker-platform-with-aiml-api-nextjs-react-and-tailwind-css-using-openai-gpt-4o-and-dalle-3-models-46ip',
-            github: 'https://raw.githubusercontent.com/abdibrokhim/ai-sticker-maker/main/TUTORIAL.md',
+            github: 'https://github.com/abdibrokhim/ai-sticker-maker',
             youtube: '',
             twitter: '',
             linkedin: '',
@@ -294,11 +294,11 @@ export const TUTORIALS: Tutorial[] = [
         description:
             'Learn to convert AI-generated text into human-like copy. Integrate AI/ML API, Clerk Auth, Next.js, Tailwind CSS, and deploy on Vercel.',
         link: '/tutorial/ai-text-humanizer-nextjs',
-        cover: '',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/40.png',
         socials: {
             medium: 'https://medium.com/@abdibrokhim/comprehensive-and-step-by-step-tutorial-on-building-an-ai-text-humanizer-with-ai-ml-api-next-js-d42c4850a31c',
             dev: 'https://dev.to/abdibrokhim/step-by-step-tutorial-on-building-an-ai-text-humanizer-with-aiml-api-and-integration-with-clerk-auth-and-deploying-to-vercel-moj',
-            github: 'https://raw.githubusercontent.com/abdibrokhim/humanaize/main/TUTORIAL.md',
+            github: 'https://github.com/abdibrokhim/humanaize',
             youtube: 'https://youtu.be/CLrENdjIe58?si=694k_MrF6pBaplf7',
             twitter: '',
             linkedin: '',
@@ -310,11 +310,11 @@ export const TUTORIALS: Tutorial[] = [
         description:
             'Design PrepAlly—an interactive AI-driven coding interviewer. Integrate AI/ML API, Clerk authentication, and deploy easily on Vercel.',
         link: '/tutorial/ai-coding-interviewer-startup',
-        cover: '',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/38.png',
         socials: {
             medium: 'https://medium.com/@abdibrokhim/lets-build-startup-2eb5ddfab4af',
             dev: 'https://dev.to/abdibrokhim/step-by-step-tutorial-on-building-ai-coding-interviewer-with-aiml-api-and-integration-with-clerk-367l',
-            github: 'https://raw.githubusercontent.com/abdibrokhim/ai-coding-interviewer/main/TUTORIAL.md',
+            github: 'https://github.com/abdibrokhim/ai-coding-interviewer',
             youtube: 'https://youtu.be/qebSzqR7Tq4?si=NckCJRXIBpvqNxxc',
             twitter: '',
             linkedin: 'https://www.linkedin.com/posts/abdibrokhim_lets-build-a-startup-and-apply-to-y-combinator-activity-7264306363613265920-XhCL?utm_source=share&utm_medium=member_desktop&rcm=ACoAADt2h8MBtHotRGgb_ePOpWusMY9VKCqELw8',
@@ -326,11 +326,11 @@ export const TUTORIALS: Tutorial[] = [
         description:
             'Learn to index PDF content and enable advanced Q&A using Pinecone. Perfect for students seeking quick answers in large documents.',
         link: '/tutorial/chat-with-pdf-pinecone',
-        cover: '',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/37.png',
         socials: {
             medium: 'https://medium.com/@abdibrokhim/building-chat-with-pdf-from-scratch-with-advanced-ai-ml-api-and-pinecone-leading-vector-database-2dbdb6b3e470',
             dev: 'https://dev.to/abdibrokhim/building-chat-with-pdf-from-scratch-with-advanced-aiml-api-and-pinecone-leading-vector-database-3o7m',
-            github: 'https://raw.githubusercontent.com/abdibrokhim/nextgen-o1/main/TUTORIAL.md',
+            github: 'https://github.com/abdibrokhim/nextgen-o1',
             youtube: 'https://youtu.be/_wTaMLL4by0?si=LsUizYox8IjAx36z',
             twitter: '',
             linkedin: 'https://www.linkedin.com/posts/abdibrokhim_building-chat-with-pdf-eg-nextgen-o1-activity-7268279006490185728-T1Zb?utm_source=share&utm_medium=member_desktop&rcm=ACoAADt2h8MBtHotRGgb_ePOpWusMY9VKCqELw8',
@@ -342,11 +342,11 @@ export const TUTORIALS: Tutorial[] = [
         description:
             'Use AI/ML APIs, Firecrawl, Next.js, and Tailwind CSS to redesign web pages into vintage 90s style without losing core functionality.',
         link: '/tutorial/90s-style-website-transformation',
-        cover: '',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/36.png',
         socials: {
             medium: 'https://medium.com/@abdibrokhim/building-a-tool-that-transforms-modern-websites-into-authentic-90s-style-designs-while-preserving-95a835b5b7a0',
             dev: 'https://dev.to/abdibrokhim/building-a-tool-that-transforms-modern-websites-into-authentic-90s-style-designs-using-aiml-api-5ame',
-            github: 'https://raw.githubusercontent.com/abdibrokhim/neuronostalgia-hack24/main/TUTORIAL.md',
+            github: 'https://github.com/abdibrokhim/neuronostalgia-hack24',
             youtube: 'https://youtu.be/QzuHMTORsB8?si=gqkj927Dp0TRxMm8',
             twitter: '',
             linkedin: 'https://www.linkedin.com/posts/abdibrokhim_new-tutorial-with-aiml-api-learn-to-activity-7275479646672998400-q_Sz?utm_source=share&utm_medium=member_desktop&rcm=ACoAADt2h8MBtHotRGgb_ePOpWusMY9VKCqELw8',
@@ -374,7 +374,7 @@ export const TUTORIALS: Tutorial[] = [
         description:
             'Learn how to add Google Maps to Swift Playgrounds for interactive iOS experiences. Enhance your app with location-based features fast.',
         link: '/tutorial/google-maps-swift-playgrounds',
-        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/36.png',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/maps.png',
         socials: {
             medium: '',
             dev: '',
@@ -390,7 +390,7 @@ export const TUTORIALS: Tutorial[] = [
         description:
             'Follow a structured walkthrough to create Bagoodex—an open-source Perplexity-style app using Python, Gradio, and advanced AI/ML capabilities.',
         link: '/tutorial/open-source-perplexity-like-app',
-        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/37.png',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/bagoodex-search.png',
         socials: {
             medium: '',
             dev: '',
@@ -406,11 +406,11 @@ export const TUTORIALS: Tutorial[] = [
         description:
             'Create a knowledge-based AI voice agent using URL scraping, Pinecone vector database, OpenAI embeddings, and ElevenLabs for natural speech.',
         link: '/tutorial/ai-voice-agent-elevenlabs-pinecone-openai',
-        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/39.png',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/ai-voice-agent.png',
         socials: {
             medium: '',
             dev: '',
-            github: 'https://raw.githubusercontent.com/abdibrokhim/ai-voice-agent',
+            github: 'https://github.com/abdibrokhim/ai-voice-agent',
             youtube: 'https://www.youtube.com/watch?v=kVM_7m0iwrE',
             twitter: '',
             linkedin: 'https://www.linkedin.com/posts/abdibrokhim_ai-voice-agent-with-knowledge-base-integration-activity-7302248896058028032-GlFM?utm_source=share&utm_medium=member_desktop&rcm=ACoAADt2h8MBtHotRGgb_ePOpWusMY9VKCqELw8',
@@ -422,7 +422,7 @@ export const TUTORIALS: Tutorial[] = [
         description:
             'Discover how to leverage aiXplain as a powerful SEO keyword generator using AI Agent technology for precise content optimization.',
         link: '/tutorial/aixplain-seo-keyword-generator',
-        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/41.png',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/seo-keywords.png',
         socials: {
             medium: '',
             dev: '',
@@ -442,7 +442,7 @@ export const TUTORIALS: Tutorial[] = [
         socials: {
             medium: 'https://medium.com/@abdibrokhim/tutorial-build-a-twitter-replyguy-using-ai-ml-api-and-twitter-api-v2-c71a03426359',
             dev: 'https://dev.to/abdibrokhim/build-a-twitter-replyguy-using-aiml-api-and-twitter-api-v2-3c3j',
-            github: 'https://raw.githubusercontent.com/abdibrokhim/Twitter-ReplyGuy/main/TUTORIAL.md',
+            github: 'https://github.com/abdibrokhim/Twitter-ReplyGuy/main/TUTORIAL.md',
             youtube: '',
             twitter: 'https://x.com/abdibrokhim/status/1904474811666985301',
             linkedin: 'https://www.linkedin.com/posts/abdibrokhim_yo-wanna-blow-up-on-twitter-without-grindin-activity-7310358499677364224-W3kj?utm_source=share&utm_medium=member_desktop&rcm=ACoAADt2h8MBtHotRGgb_ePOpWusMY9VKCqELw8',
@@ -458,7 +458,7 @@ export const TUTORIALS: Tutorial[] = [
         socials: {
             medium: '',
             dev: '',
-            github: 'https://raw.githubusercontent.com/abdibrokhim/notlink/main/TUTORIAL.md',
+            github: 'https://github.com/abdibrokhim/notlink/main/TUTORIAL.md',
             youtube: 'https://www.youtube.com/watch?v=Mhz_eVH3XnQ',
             twitter: '',
             linkedin: 'https://www.linkedin.com/posts/opencommunity_just-uploaded-my-first-ever-rust-video-tutorial-activity-7296255009766170624-VhAt?utm_source=share&utm_medium=member_desktop&rcm=ACoAADt2h8MBtHotRGgb_ePOpWusMY9VKCqELw8',

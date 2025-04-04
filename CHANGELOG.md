@@ -6,6 +6,7 @@ just to make sure i was not sleeping all the time.
 
 ### 4th April, 2025
 - made copy/sharing more accessible
+- updated tutorial cover images
 
 ## v0.0.1
 
