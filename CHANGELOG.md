@@ -4,6 +4,9 @@ just to make sure i was not sleeping all the time.
 
 ## v0.0.2
 
+### 5th April, 2025
+- added promo video for .env (aka take trash) app.
+
 ### 4th April, 2025
 - made copy/sharing more accessible
 - updated tutorial cover images
