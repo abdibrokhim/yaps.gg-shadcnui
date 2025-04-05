@@ -5,6 +5,9 @@ just to make sure i was not sleeping all the time.
 ## v0.0.2
 
 ### 5th April, 2025
+- just added application. will be listing all my applications here.
+
+### 5th April, 2025
 - added promo video for .env (aka take trash) app.
 
 ### 4th April, 2025

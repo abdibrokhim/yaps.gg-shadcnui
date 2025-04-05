@@ -27,11 +27,11 @@ export const EXPERIENCES: Experience[] = [
         url: 'https://www.huawei.com',
         responsibilities: [
             {
-                description: 'Integrating AI Neural Network chips into human brain.',
+                description: 'Vibe coding AI Neural Network chips into the human brain.',
             },
         ],
         metadata: {
-            position: 'Network Engineer',
+            position: 'Vibe Coder',
             startDate: 'April 2025',
             endDate: 'Present',
         },
