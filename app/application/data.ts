@@ -5,7 +5,6 @@ type ApplicationType = 'transfer' | 'scholarship' | 'fellowship' | 'internship' 
 type Social = {
     medium?: string
     dev?: string
-    github?: string
     youtube?: string
     patreon?: string
     topmate?: string
@@ -32,7 +31,6 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
             patreon: 'https://www.patreon.com/posts/accepted-future-111913095',
         },
@@ -49,7 +47,6 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
             patreon: 'https://www.patreon.com/posts/accepted-harvard-111913883',
             topmate: 'https://topmate.io/abdibrokhim/1324206',
@@ -67,7 +64,6 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
             patreon: 'https://www.patreon.com/posts/accepted-become-111913405',
             topmate: 'https://topmate.io/abdibrokhim/1324206',
@@ -85,7 +81,6 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
             patreon: 'https://www.patreon.com/posts/accepted-hack-111914002',
             topmate: 'https://topmate.io/abdibrokhim/1324206',
@@ -103,9 +98,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: 'https://youtu.be/m6eWBvbf4Uk',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/accepted-ies-at-111914077',
             topmate: 'https://topmate.io/abdibrokhim/1324206',
         },
         applicationStatus: 'accepted',
@@ -116,14 +110,13 @@ export const APPLICATIONS: Application[] = [
     },
     {
         uid: 'application-5',
-        title: 'Leaders Fellowship Maldives 2024: Empower Future Changemakers',
+        title: 'Leaders Fellowship Maldives 2024',
         link: '/application/leaders-fellowship-maldives-2024',
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/accepted-leaders-111913543',
             topmate: 'https://topmate.io/abdibrokhim/1324206',
         },
         applicationStatus: 'accepted',
@@ -139,9 +132,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/rejected-ladder-111914199',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -152,14 +144,13 @@ export const APPLICATIONS: Application[] = [
     },
     {
         uid: 'application-7',
-        title: 'Youth Interfaith Leaders Fellowship 2025: Climate Action',
+        title: 'Youth Interfaith Leaders Fellowship 2025',
         link: '/application/youth-interfaith-climate-fellowship-2025',
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: 'https://youtu.be/4BPB8Cx6Ll4',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/in-review-youth-111913576',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -175,9 +166,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/rejected-hack-111914045',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -193,12 +183,11 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/unknown-world-111913443',
             topmate: '',
         },
-        applicationStatus: 'rejected',
+        applicationStatus: 'unknown',
         writingType: ['Q&A Essay'],
         applicationType: ['scholarship', 'fellowship'],
         appliedYear: '2024',
@@ -211,9 +200,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/in-review-irena-111913510',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -229,7 +217,6 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
             patreon: '',
             topmate: '',
@@ -247,9 +234,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/accepted-2024-111914285',
             topmate: '',
         },
         applicationStatus: 'accepted',
@@ -265,9 +251,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/rejected-of-vsrp-111914325',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -283,9 +268,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/rejected-oecd-111914383',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -301,9 +285,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/unknown-software-111914522',
             topmate: '',
         },
         applicationStatus: 'unknown',
@@ -319,9 +302,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/unknown-central-111913650',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -337,9 +319,9 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
+
             youtube: 'https://youtu.be/bZRPy2pv2BM',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/rejected-today-111913681',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -350,14 +332,13 @@ export const APPLICATIONS: Application[] = [
     },
     {
         uid: 'application-18',
-        title: 'KAIST Summer Program Application: Study in South Korea',
+        title: 'KAIST EE Summer Program Application: Study in South Korea',
         link: '/application/kaist-summer-program-application',
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/rejected-kaist-111914566',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -373,9 +354,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/rejected-778-111914903',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -391,7 +371,6 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
             patreon: '',
             topmate: '',
@@ -409,9 +388,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/irl-usa-visa-111920861',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -427,9 +405,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/rejected-next-111921197',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -445,9 +422,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/rejected-mrbeast-111921316',
             topmate: '',
         },
         applicationStatus: 'unknown',
@@ -463,9 +439,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/accepted-harvard-111913825',
             topmate: '',
         },
         applicationStatus: 'accepted',
@@ -481,9 +456,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/rejected-yale-111921391',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -499,9 +473,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/accepted-to-join-111921568',
             topmate: '',
         },
         applicationStatus: 'unknown',
@@ -517,9 +490,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/unknown-notion-111921680',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -535,9 +507,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/unknown-lex-2024-111921814',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -553,9 +524,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/rejected-2024-111913724',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -571,9 +541,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/accepted-ai-2024-111922081',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -589,9 +558,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/rejected-first-111922166',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -607,9 +575,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/rejected-tufts-111922316',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -625,9 +592,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/rejected-of-2024-111922398',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -638,14 +604,13 @@ export const APPLICATIONS: Application[] = [
     },
     {
         uid: 'application-34',
-        title: 'USC Transfer Essays: Write to Impress & Succeed',
+        title: 'USC Transfer Essays',
         link: '/application/usc-transfer-application-essays',
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/rejected-usc-111922547',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -656,14 +621,13 @@ export const APPLICATIONS: Application[] = [
     },
     {
         uid: 'application-35',
-        title: 'Cornell University Transfer: Craft a Compelling Application',
+        title: 'Cornell University Transfer',
         link: '/application/cornell-transfer-application',
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/rejected-cornell-111922633',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -679,9 +643,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/got-offer-y-cold-111922748',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -697,9 +660,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/unknown-2024-111923270',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -715,9 +677,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/landed-10-upwork-111923455',
             topmate: '',
         },
         applicationStatus: 'ongoing',
@@ -733,7 +694,6 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
             patreon: '',
             topmate: '',
@@ -751,9 +711,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/in-review-oist-111924103',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -769,10 +728,9 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
-            topmate: '',
+            patreon: 'https://www.patreon.com/posts/accepted-hpair-116012451',
+            topmate: 'https://topmate.io/abdibrokhim/1324206',
         },
         applicationStatus: 'accepted',
         writingType: ['Q&A Essay', 'Video Essay', 'Interview'],
@@ -787,9 +745,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/in-review-2025-116012586',
             topmate: '',
         },
         applicationStatus: 'unknown',
@@ -805,9 +762,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: 'https://youtu.be/mj0H4EiCIr0',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/accepted-earth-116013616q',
             topmate: '',
         },
         applicationStatus: 'accepted',
@@ -823,9 +779,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/in-review-letter-116012179',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -841,9 +796,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/accepted-shape-116012281',
             topmate: '',
         },
         applicationStatus: 'accepted',
@@ -859,9 +813,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: 'https://youtu.be/PF6yA1hM6xM',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/in-review-2025-116011649',
             topmate: '',
         },
         applicationStatus: 'rejected',
@@ -877,9 +830,8 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
-            patreon: '',
+            patreon: 'https://www.patreon.com/posts/accepted-ies-at-116010968',
             topmate: 'https://topmate.io/abdibrokhim/1324206',
         },
         applicationStatus: 'rejected',
@@ -895,7 +847,6 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
             patreon: '',
             topmate: '',
@@ -913,7 +864,6 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
             patreon: '',
             topmate: '',
@@ -931,7 +881,6 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
             patreon: '',
             topmate: '',
@@ -949,7 +898,6 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
             patreon: '',
             topmate: '',
@@ -967,7 +915,6 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
             patreon: '',
             topmate: '',
@@ -985,7 +932,6 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
             patreon: '',
             topmate: '',
@@ -1003,7 +949,6 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
             patreon: '',
             topmate: '',
@@ -1021,7 +966,6 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
             patreon: '',
             topmate: '',
@@ -1039,12 +983,11 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
             patreon: '',
             topmate: '',
         },
-        applicationStatus: 'ongoing',
+        applicationStatus: 'rejected',
         writingType: ['Q&A Essay'],
         applicationType: ['startup'],
         appliedYear: '2025',
@@ -1057,12 +1000,11 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
             patreon: '',
             topmate: '',
         },
-        applicationStatus: 'ongoing',
+        applicationStatus: 'rejected',
         writingType: ['Q&A Essay'],
         applicationType: ['startup'],
         appliedYear: '2025',
@@ -1075,12 +1017,11 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
             patreon: '',
             topmate: '',
         },
-        applicationStatus: 'ongoing',
+        applicationStatus: 'unknown',
         writingType: ['Q&A Essay'],
         applicationType: ['competition'],
         appliedYear: '2025',
@@ -1093,12 +1034,11 @@ export const APPLICATIONS: Application[] = [
         socials: {
             medium: '',
             dev: '',
-            github: '',
             youtube: '',
             patreon: '',
             topmate: '',
         },
-        applicationStatus: 'ongoing',
+        applicationStatus: 'unknown',
         writingType: ['Cover Letter'],
         applicationType: ['graduate degree'],
         appliedYear: '2025',
