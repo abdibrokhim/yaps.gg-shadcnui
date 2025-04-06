@@ -9,6 +9,7 @@ import {
   Bot,
   Box,
   Boxes,
+  Calendar,
   Command,
   FlaskConicalIcon,
   Frame,
@@ -92,6 +93,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         title: "Feedback",
         url: "mailto:abdibrokhim@gmail.com",
         icon: Send,
+      },
+      {
+        title: "Book a Call",
+        url: "https://cal.com/abdibrokhim",
+        icon: Calendar,
       },
     ],
     projects: [

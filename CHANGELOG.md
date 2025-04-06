@@ -4,9 +4,15 @@ just to make sure i was not sleeping all the time.
 
 ## v0.0.2
 
+### 7th April, 2025
+- all applications were added
+- added book a call to sidebar
+
+### 6th April, 2025
+- adding more and more applications [here](/app/application/)
+
 ### 5th April, 2025
 - just added application. will be listing all my applications here.
-- adding more and more applications [here](/app/application/)
 
 ### 5th April, 2025
 - added promo video for .env (aka take trash) app.
