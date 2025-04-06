@@ -15,7 +15,8 @@ type Application = {
     socials?: Social
     year?: string
     status: 'in-progress' | 'rejected' | 'accepted' | 'unknown' | 'ongoing'
-    writingType?: 'Q&A Essay' | 'Essay' | 'Cover Letter' | 'Interview' | 'All Combined' | 'Video Essay' | 'Statement of Purpose/Objectives'
+    writingType?: 'Q&A Essay' | 'Essay' | 'Cover Letter' | 'Interview' | 'All Combined' | 'Video Essay' | 'Statement of Purpose/Objectives' | 'Letter of Motivation'
+    appliedAt?: string
 }
 
 export const APPLICATIONS: Application[] = [
@@ -32,6 +33,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'accepted',
         writingType: 'Q&A Essay',
+        appliedAt: '2024'
     },
     {
         uid: 'application-1',
@@ -47,6 +49,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'accepted',
         writingType: 'All Combined',
+        appliedAt: '2024'
     },
     {
         uid: 'application-2',
@@ -62,6 +65,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'accepted',
         writingType: 'All Combined',
+        appliedAt: '2024'
     },
     {
         uid: 'application-3',
@@ -77,6 +81,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'accepted',
         writingType: 'Q&A Essay',
+        appliedAt: '2024'
     },
     {
         uid: 'application-4',
@@ -92,6 +97,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'accepted',
         writingType: 'Video Essay',
+        appliedAt: '2024'
     },
     {
         uid: 'application-5',
@@ -107,6 +113,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'accepted',
         writingType: 'Q&A Essay',
+        appliedAt: '2024'
     },
     {
         uid: 'application-6',
@@ -122,6 +129,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'Q&A Essay',
+        appliedAt: '2024'
     },
     {
         uid: 'application-7',
@@ -137,6 +145,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'All Combined',
+        appliedAt: '2024'
     },
     {
         uid: 'application-8',
@@ -152,6 +161,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'Q&A Essay',
+        appliedAt: '2024'
     },
     {
         uid: 'application-9',
@@ -167,6 +177,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'Q&A Essay',
+        appliedAt: '2024'
     },
     {
         uid: 'application-10',
@@ -182,6 +193,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'All Combined',
+        appliedAt: '2024'
     },
     {
         uid: 'application-11',
@@ -197,6 +209,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'Q&A Essay',
+        appliedAt: '2024'
     },
     {
         uid: 'application-12',
@@ -212,6 +225,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'accepted',
         writingType: 'Q&A Essay',
+        appliedAt: '2024'
     },
     {
         uid: 'application-13',
@@ -227,6 +241,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'Statement of Purpose/Objectives',
+        appliedAt: '2024'
     },
     {
         uid: 'application-14',
@@ -242,6 +257,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'Cover Letter',
+        appliedAt: '2024'
     },
     {
         uid: 'application-15',
@@ -257,6 +273,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'unknown',
         writingType: 'Cover Letter',
+        appliedAt: '2024'
     },
     {
         uid: 'application-16',
@@ -272,6 +289,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'Q&A Essay',
+        appliedAt: '2024'
     },
     {
         uid: 'application-17',
@@ -287,6 +305,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'Q&A Essay',
+        appliedAt: '2024'
     },
     {
         uid: 'application-18',
@@ -302,6 +321,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'Q&A Essay',
+        appliedAt: '2024'
     },
     {
         uid: 'application-19',
@@ -317,6 +337,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'Q&A Essay',
+        appliedAt: '2024'
     },
     {
         uid: 'application-20',
@@ -332,6 +353,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'accepted',
         writingType: 'Q&A Essay',
+        appliedAt: '2024'
     },
     {
         uid: 'application-21',
@@ -347,6 +369,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'Q&A Essay',
+        appliedAt: '2024'
     },
     {
         uid: 'application-22',
@@ -362,6 +385,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'Q&A Essay',
+        appliedAt: '2024'
     },
     {
         uid: 'application-23',
@@ -377,6 +401,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'unknown',
         writingType: 'Cover Letter',
+        appliedAt: '2024'
     },
     {
         uid: 'application-24',
@@ -392,6 +417,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'accepted',
         writingType: 'Q&A Essay',
+        appliedAt: '2024'
     },
     {
         uid: 'application-25',
@@ -407,6 +433,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'All Combined',
+        appliedAt: '2024'
     },
     {
         uid: 'application-26',
@@ -422,6 +449,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'unknown',
         writingType: 'Cover Letter',
+        appliedAt: '2024'
     },
     {
         uid: 'application-27',
@@ -437,6 +465,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'Cover Letter',
+        appliedAt: '2024'
     },
     {
         uid: 'application-28',
@@ -452,6 +481,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'Q&A Essay',
+        appliedAt: '2024'
     },
     {
         uid: 'application-29',
@@ -467,6 +497,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'Q&A Essay',
+        appliedAt: '2024'
     },
     {
         uid: 'application-30',
@@ -482,6 +513,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'Q&A Essay',
+        appliedAt: '2024'
     },
     {
         uid: 'application-31',
@@ -497,6 +529,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'Q&A Essay',
+        appliedAt: '2024'
     },
     {
         uid: 'application-32',
@@ -512,6 +545,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'All Combined',
+        appliedAt: '2024'
     },
     {
         uid: 'application-33',
@@ -527,6 +561,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'All Combined',
+        appliedAt: '2024'
     },
     {
         uid: 'application-34',
@@ -542,6 +577,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'All Combined',
+        appliedAt: '2024'
     },
     {
         uid: 'application-35',
@@ -557,6 +593,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'All Combined',
+        appliedAt: '2024'
     },
     {
         uid: 'application-36',
@@ -572,6 +609,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'Cover Letter',
+        appliedAt: '2024'
     },
     {
         uid: 'application-37',
@@ -587,10 +625,11 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'rejected',
         writingType: 'Cover Letter',
+        appliedAt: '2024'
     },
     {
         uid: 'application-38',
-        title: 'Upwork Cover Letter Template: Win More Freelance Gigs',
+        title: 'Upwork Cover Letter Template',
         link: '/application/upwork-cover-letter-template',
         socials: {
             medium: '',
@@ -602,6 +641,7 @@ export const APPLICATIONS: Application[] = [
         },
         status: 'ongoing',
         writingType: 'Cover Letter',
+        appliedAt: '2024'
     },
     {
         uid: 'application-39',
@@ -615,7 +655,184 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'ongoing',
+        status: 'accepted',
         writingType: 'Q&A Essay',
+        appliedAt: '2024'
+    },
+    {
+        uid: 'application-40',
+        title: 'OIST Research Internship Application',
+        link: '/application/oist-research-internship-application',
+        socials: {
+            medium: '',
+            dev: '',
+            github: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        status: 'rejected',
+        writingType: 'Q&A Essay',
+        appliedAt: '2024'
+    },
+    {
+        uid: 'application-41',
+        title: 'HPAIR Harvard Conference 2025: Scholarship Application',
+        link: '/application/hpair-2025-harvard-conference-scholarship',
+        socials: {
+            medium: '',
+            dev: '',
+            github: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        status: 'accepted',
+        writingType: 'Q&A Essay',
+        appliedAt: '2025'
+    },
+    {
+        uid: 'application-42',
+        title: 'Application to the 2025 cohort of Knight-Hennessy Scholars at Stanford University',
+        link: '/application/knight-hennessy-scholars-2025-application',
+        socials: {
+            medium: '',
+            dev: '',
+            github: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        status: 'unknown',
+        writingType: 'All Combined',
+        appliedAt: '2025'
+    },
+    {
+        uid: 'application-43',
+        title: 'The Earth Prize Facilitator\'s Community of Practice Application Form',
+        link: '/application/earth-prize-facilitator-application',
+        socials: {
+            medium: '',
+            dev: '',
+            github: '',
+            youtube: 'https://youtu.be/mj0H4EiCIr0',
+            patreon: '',
+            topmate: '',
+        },
+        status: 'accepted',
+        writingType: 'Video Essay',
+        appliedAt: '2025'
+    },
+    {
+        uid: 'application-44',
+        title: 'DAAD Letter of Motivation',
+        link: '/application/daad-letter-of-motivation',
+        socials: {
+            medium: '',
+            dev: '',
+            github: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        status: 'rejected',
+        writingType: 'Letter of Motivation',
+        appliedAt: '2025'
+    },
+    {
+        uid: 'application-45',
+        title: 'Shape the Future Challenge 2025 | Moonshot Pirates',
+        link: '/application/shape-the-future-challenge-moonshot-pirates',
+        socials: {
+            medium: '',
+            dev: '',
+            github: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        status: 'accepted',
+        writingType: 'Q&A Essay',
+        appliedAt: '2025'
+    },
+    {
+        uid: 'application-46',
+        title: '2025 Young Leaders Fellowship: Ignite Global Change',
+        link: '/application/2025-young-leaders-fellowship',
+        socials: {
+            medium: '',
+            dev: '',
+            github: '',
+            youtube: 'https://youtu.be/PF6yA1hM6xM',
+            patreon: '',
+            topmate: '',
+        },
+        status: 'rejected',
+        writingType: 'All Combined',
+        appliedAt: '2025'
+    },
+    {
+        uid: 'application-47',
+        title: 'IES at Copernicus Berlin: Stages 3 & 4 Scholarship Application',
+        link: '/application/ies-copernicus-berlin-stage-3-and-4',
+        socials: {
+            medium: '',
+            dev: '',
+            github: '',
+            youtube: '',
+            patreon: '',
+            topmate: 'https://topmate.io/abdibrokhim/1324206',
+        },
+        status: 'rejected',
+        writingType: 'Interview',
+        appliedAt: '2025'
+    },
+    {
+        uid: 'application-48',
+        title: 'Young Professional Internships Program 2025',
+        link: '/application/young-professional-internships-program',
+        socials: {
+            medium: '',
+            dev: '',
+            github: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        status: 'unknown',
+        writingType: 'Essay',
+        appliedAt: '2025'
+    },
+    {
+        uid: 'application-49',
+        title: 'f.inc Founders Application',
+        link: '/application/founders-application-finc',
+        socials: {
+            medium: '',
+            dev: '',
+            github: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        status: 'rejected',
+        writingType: 'Q&A Essay',
+        appliedAt: '2025'
+    },
+    {
+        uid: 'application-50',
+        title: 'AI Action Summit 2025 in France: CoMedAI (by CoMed)',
+        link: '/application/ai-action-summit-2025-france-comed',
+        socials: {
+            medium: '',
+            dev: '',
+            github: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        status: 'rejected',
+        writingType: 'Q&A Essay',
+        appliedAt: '2025'
     },
 ]
