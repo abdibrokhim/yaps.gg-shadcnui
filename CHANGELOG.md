@@ -6,6 +6,7 @@ just to make sure i was not sleeping all the time.
 
 ### 5th April, 2025
 - just added application. will be listing all my applications here.
+- adding more and more applications [here](/app/application/)
 
 ### 5th April, 2025
 - added promo video for .env (aka take trash) app.
