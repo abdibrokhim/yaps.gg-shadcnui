@@ -7,6 +7,7 @@ just to make sure i was not sleeping all the time.
 ### 7th April, 2025
 - all applications were added
 - added book a call to sidebar
+- open graph image added
 
 ### 6th April, 2025
 - adding more and more applications [here](/app/application/)

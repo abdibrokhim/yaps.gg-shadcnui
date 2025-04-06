@@ -31,8 +31,8 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: "Yaps World",
-  description: "Yaps World",
+  title: "Yaps World by @abdibrokhim",
+  description: "Yaps World - The Most Viral Open Source Things by @abdibrokhim",
   metadataBase: new URL("https://yaps.gg/"),
   keywords: ["ai builder", "youtube creator", "open-source builder", "open-source"],
   
@@ -48,8 +48,8 @@ export const metadata: Metadata = {
   ],
 
   openGraph: {
-    title: "Yaps World",
-    description: "Yaps World",
+    title: "Yaps World by @abdibrokhim",
+    description: "Yaps World - The Most Viral Open Source Things by @abdibrokhim",
     type: "website",
     url: "/",
     images: [
@@ -68,8 +68,8 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image',
-    title: "Yaps World",
-    description: "Yaps World",
+    title: "Yaps World by @abdibrokhim",
+    description: "Yaps World - The Most Viral Open Source Things by @abdibrokhim",
     images: ['/images/yapsdotgg.png'],
     site: '@abdibrokhim',
     creator: '@abdibrokhim',
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
   },
 
   appleWebApp: {
-    title: 'Yaps World',
+    title: 'Yaps World by @abdibrokhim',
     statusBarStyle: 'black-translucent',
   },
   
