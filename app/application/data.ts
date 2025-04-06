@@ -1,3 +1,7 @@
+type WritingType = 'Q&A Essay' | 'Essay' | 'Cover Letter' | 'Interview' | 'Video Essay' | 'Statement of Purpose' | 'Letter of Motivation' | 'Statement of Objectives'
+
+type ApplicationType = 'transfer' | 'scholarship' | 'fellowship' | 'internship' | 'competition' | 'startup' | 'graduate degree' | 'leadership' | 'hackathon' | 'research program' | 'conference' | 'mentorship' | 'facilitator'
+
 type Social = {
     medium?: string
     dev?: string
@@ -13,10 +17,11 @@ type Application = {
     title: string
     link: string
     socials?: Social
-    year?: string
-    status: 'in-progress' | 'rejected' | 'accepted' | 'unknown' | 'ongoing'
-    writingType?: 'Q&A Essay' | 'Essay' | 'Cover Letter' | 'Interview' | 'All Combined' | 'Video Essay' | 'Statement of Purpose/Objectives' | 'Letter of Motivation'
-    appliedAt?: string
+    applicationStatus: 'in-progress' | 'rejected' | 'accepted' | 'unknown' | 'ongoing'
+    writingType?: WritingType[]
+    applicationType?: ApplicationType[]
+    appliedYear?: string
+    requiredSubscription?: 'free' | 'paid'
 }
 
 export const APPLICATIONS: Application[] = [
@@ -31,9 +36,11 @@ export const APPLICATIONS: Application[] = [
             youtube: '',
             patreon: 'https://www.patreon.com/posts/accepted-future-111913095',
         },
-        status: 'accepted',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'accepted',
+        writingType: ['Q&A Essay'],
+        applicationType: ['scholarship', 'fellowship'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-1',
@@ -47,9 +54,11 @@ export const APPLICATIONS: Application[] = [
             patreon: 'https://www.patreon.com/posts/accepted-harvard-111913883',
             topmate: 'https://topmate.io/abdibrokhim/1324206',
         },
-        status: 'accepted',
-        writingType: 'All Combined',
-        appliedAt: '2024'
+        applicationStatus: 'accepted',
+        writingType: ['Q&A Essay', 'Video Essay', 'Interview'],
+        applicationType: ['conference', 'scholarship', 'fellowship', 'leadership'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-2',
@@ -63,9 +72,11 @@ export const APPLICATIONS: Application[] = [
             patreon: 'https://www.patreon.com/posts/accepted-become-111913405',
             topmate: 'https://topmate.io/abdibrokhim/1324206',
         },
-        status: 'accepted',
-        writingType: 'All Combined',
-        appliedAt: '2024'
+        applicationStatus: 'accepted',
+        writingType: ['Q&A Essay'],
+        applicationType: ['scholarship', 'leadership'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-3',
@@ -79,9 +90,11 @@ export const APPLICATIONS: Application[] = [
             patreon: 'https://www.patreon.com/posts/accepted-hack-111914002',
             topmate: 'https://topmate.io/abdibrokhim/1324206',
         },
-        status: 'accepted',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'accepted',
+        writingType: ['Q&A Essay'],
+        applicationType: ['hackathon'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-4',
@@ -95,9 +108,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: 'https://topmate.io/abdibrokhim/1324206',
         },
-        status: 'accepted',
-        writingType: 'Video Essay',
-        appliedAt: '2024'
+        applicationStatus: 'accepted',
+        writingType: ['Video Essay'],
+        applicationType: ['scholarship'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-5',
@@ -111,9 +126,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: 'https://topmate.io/abdibrokhim/1324206',
         },
-        status: 'accepted',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'accepted',
+        writingType: ['Q&A Essay'],
+        applicationType: ['leadership'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-6',
@@ -127,9 +144,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['scholarship'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-7',
@@ -143,9 +162,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'All Combined',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['scholarship', 'fellowship'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-8',
@@ -159,9 +180,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['hackathon'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-9',
@@ -175,9 +198,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['scholarship', 'fellowship'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-10',
@@ -191,9 +216,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'All Combined',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['scholarship', 'fellowship', 'leadership'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-11',
@@ -207,13 +234,15 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['hackathon'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-12',
-        title: 'Headstarter Fellowship & Accelerator: Propel Your Startup',
+        title: 'Headstarter Fellowship & Accelerator',
         link: '/application/headstarter-fellowship-accelerator',
         socials: {
             medium: '',
@@ -223,9 +252,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'accepted',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'accepted',
+        writingType: ['Q&A Essay'],
+        applicationType: ['fellowship', 'startup'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-13',
@@ -239,13 +270,15 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Statement of Purpose/Objectives',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Statement of Purpose'],
+        applicationType: ['research program'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-14',
-        title: 'OECD Internship Cover Letter: Highlight Global Impact',
+        title: 'OECD Internship Cover Letter',
         link: '/application/oecd-internship-cover-letter',
         socials: {
             medium: '',
@@ -255,13 +288,15 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Cover Letter',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Cover Letter'],
+        applicationType: ['internship'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-15',
-        title: 'Scale AI Software Engineering Intern 2025: Cover Letter Tips',
+        title: 'Scale AI Software Engineering Intern 2025',
         link: '/application/scale-ai-intern-2025-cover-letter',
         socials: {
             medium: '',
@@ -271,13 +306,15 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'unknown',
-        writingType: 'Cover Letter',
-        appliedAt: '2024'
+        applicationStatus: 'unknown',
+        writingType: ['Cover Letter'],
+        applicationType: ['internship'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-16',
-        title: '2024 Central Asia & Türkiye Youth Talks: Join & Inspire',
+        title: '2024 Central Asia & Türkiye Youth Talks',
         link: '/application/central-asia-turkiye-youth-talks-2024',
         socials: {
             medium: '',
@@ -287,13 +324,15 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['leadership'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-17',
-        title: 'Business Today\'s 50th International Conference: Global Insights',
+        title: 'Business Today\'s 50th International Conference',
         link: '/application/business-today-50th-international-conference',
         socials: {
             medium: '',
@@ -303,9 +342,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['leadership'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-18',
@@ -319,9 +360,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['scholarship', 'research program'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-19',
@@ -335,13 +378,15 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['scholarship', 'startup'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-20',
-        title: 'Yandex Internship: Launch Your Tech Career in Russia',
+        title: 'Yandex Internship',
         link: '/application/yandex-intern-application',
         socials: {
             medium: '',
@@ -351,9 +396,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'accepted',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'accepted',
+        writingType: ['Q&A Essay'],
+        applicationType: ['internship'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-21',
@@ -367,9 +414,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['conference'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-22',
@@ -383,13 +432,15 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['internship', 'research program'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-23',
-        title: 'MrBeast Data Analyst Application: Stand Out in Analytics',
+        title: 'MrBeast Data Analyst Application',
         link: '/application/mrbeast-data-analyst-application',
         socials: {
             medium: '',
@@ -399,9 +450,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'unknown',
-        writingType: 'Cover Letter',
-        appliedAt: '2024'
+        applicationStatus: 'unknown',
+        writingType: ['Cover Letter'],
+        applicationType: ['internship'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-24',
@@ -415,13 +468,15 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'accepted',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'accepted',
+        writingType: ['Q&A Essay', 'Video Essay', 'Interview'],
+        applicationType: ['conference', 'scholarship', 'fellowship', 'leadership'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-25',
-        title: 'Yale Transfer Essays: Craft a Winning Application',
+        title: 'Yale Transfer Essays',
         link: '/application/yale-transfer-essays',
         socials: {
             medium: '',
@@ -431,13 +486,15 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'All Combined',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['transfer'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-26',
-        title: 'Cognition of Language Lab Application: Advance Linguistic Research',
+        title: 'Cognition of Language Lab Application',
         link: '/application/cognition-of-language-lab-application',
         socials: {
             medium: '',
@@ -447,13 +504,15 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'unknown',
-        writingType: 'Cover Letter',
-        appliedAt: '2024'
+        applicationStatus: 'unknown',
+        writingType: ['Cover Letter'],
+        applicationType: ['internship', 'research program'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-27',
-        title: 'Notion Cover Letter: Secure Your Software Engineering Role',
+        title: 'Notion Cover Letter Software Engineering Position',
         link: '/application/notion-software-engineer-cover-letter',
         socials: {
             medium: '',
@@ -463,13 +522,15 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Cover Letter',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Cover Letter'],
+        applicationType: ['internship'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-28',
-        title: 'Lex Fridman Application: Python Programmer Opportunity',
+        title: 'Lex Fridman Application Python Programmer',
         link: '/application/lex-fridman-python-programmer-application',
         socials: {
             medium: '',
@@ -479,13 +540,15 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['internship'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-29',
-        title: 'Catalyst Program Application: Accelerate Your Growth',
+        title: 'Catalyst Program Application',
         link: '/application/catalyst-program-application',
         socials: {
             medium: '',
@@ -495,13 +558,15 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['internship'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-30',
-        title: 'Generative AI Accelerator: Ignite Your Creative Tech Ideas',
+        title: 'Generative AI Accelerator',
         link: '/application/generative-ai-accelerator-application',
         socials: {
             medium: '',
@@ -511,13 +576,15 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['internship'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-31',
-        title: 'Entrepreneur First Application: Build a World-Changing Startup',
+        title: 'Entrepreneur First Application',
         link: '/application/entrepreneur-first-application',
         socials: {
             medium: '',
@@ -527,9 +594,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['internship'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-32',
@@ -543,9 +612,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'All Combined',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['transfer'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-33',
@@ -559,9 +630,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'All Combined',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['transfer'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-34',
@@ -575,9 +648,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'All Combined',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['transfer'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-35',
@@ -591,13 +666,15 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'All Combined',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['transfer'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-36',
-        title: 'YC Internships: Persuasive Cold Cover Letters & Emails',
+        title: 'YC Internships, Cold Cover Letters & Emails',
         link: '/application/yc-internships-cold-cover-letters',
         socials: {
             medium: '',
@@ -607,9 +684,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Cover Letter',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Cover Letter'],
+        applicationType: ['internship'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-37',
@@ -623,9 +702,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Cover Letter',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Cover Letter'],
+        applicationType: ['internship'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-38',
@@ -639,9 +720,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'ongoing',
-        writingType: 'Cover Letter',
-        appliedAt: '2024'
+        applicationStatus: 'ongoing',
+        writingType: ['Cover Letter'],
+        applicationType: ['competition'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-39',
@@ -655,9 +738,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'accepted',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'accepted',
+        writingType: ['Q&A Essay'],
+        applicationType: ['internship'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-40',
@@ -671,9 +756,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Q&A Essay',
-        appliedAt: '2024'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['internship', 'research program'],
+        appliedYear: '2024',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-41',
@@ -687,9 +774,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'accepted',
-        writingType: 'Q&A Essay',
-        appliedAt: '2025'
+        applicationStatus: 'accepted',
+        writingType: ['Q&A Essay', 'Video Essay', 'Interview'],
+        applicationType: ['conference', 'scholarship', 'fellowship', 'leadership'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-42',
@@ -703,9 +792,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'unknown',
-        writingType: 'All Combined',
-        appliedAt: '2025'
+        applicationStatus: 'unknown',
+        writingType: ['Q&A Essay', 'Cover Letter'],
+        applicationType: ['graduate degree', 'scholarship'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-43',
@@ -719,9 +810,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'accepted',
-        writingType: 'Video Essay',
-        appliedAt: '2025'
+        applicationStatus: 'accepted',
+        writingType: ['Video Essay', 'Q&A Essay', 'Interview'],
+        applicationType: ['conference', 'scholarship', 'mentorship', 'leadership', 'facilitator'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-44',
@@ -735,13 +828,15 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Letter of Motivation',
-        appliedAt: '2025'
+        applicationStatus: 'rejected',
+        writingType: ['Letter of Motivation'],
+        applicationType: ['graduate degree', 'scholarship'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-45',
-        title: 'Shape the Future Challenge 2025 | Moonshot Pirates',
+        title: 'Shape the Future Challenge 2025, Moonshot Pirates',
         link: '/application/shape-the-future-challenge-moonshot-pirates',
         socials: {
             medium: '',
@@ -751,13 +846,15 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'accepted',
-        writingType: 'Q&A Essay',
-        appliedAt: '2025'
+        applicationStatus: 'accepted',
+        writingType: ['Q&A Essay'],
+        applicationType: ['competition', 'hackathon'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-46',
-        title: '2025 Young Leaders Fellowship: Ignite Global Change',
+        title: '2025 Young Leaders Fellowship',
         link: '/application/2025-young-leaders-fellowship',
         socials: {
             medium: '',
@@ -767,9 +864,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'All Combined',
-        appliedAt: '2025'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['conference', 'scholarship', 'fellowship', 'leadership'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-47',
@@ -783,9 +882,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: 'https://topmate.io/abdibrokhim/1324206',
         },
-        status: 'rejected',
-        writingType: 'Interview',
-        appliedAt: '2025'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay', 'Interview'],
+        applicationType: ['conference', 'scholarship', 'fellowship', 'leadership'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-48',
@@ -799,9 +900,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'unknown',
-        writingType: 'Essay',
-        appliedAt: '2025'
+        applicationStatus: 'unknown',
+        writingType: ['Essay'],
+        applicationType: ['internship'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-49',
@@ -815,9 +918,11 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Q&A Essay',
-        appliedAt: '2025'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['startup'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
     },
     {
         uid: 'application-50',
@@ -831,8 +936,172 @@ export const APPLICATIONS: Application[] = [
             patreon: '',
             topmate: '',
         },
-        status: 'rejected',
-        writingType: 'Q&A Essay',
-        appliedAt: '2025'
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['startup'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
+    },
+    {
+        uid: 'application-51',
+        title: 'YC Winter 2025 Application: PaperAI',
+        link: '/application/yc-w2025-paper-ai-application',
+        socials: {
+            medium: '',
+            dev: '',
+            github: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['startup'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
+    },
+    {
+        uid: 'application-52',
+        title: '8th Zhongguancun Tech Competition: Overseas Application',
+        link: '/application/zhongguancun-tech-competition-8th',
+        socials: {
+            medium: '',
+            dev: '',
+            github: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        applicationStatus: 'unknown',
+        writingType: ['Q&A Essay'],
+        applicationType: ['startup'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
+    },
+    {
+        uid: 'application-53',
+        title: 'AI Action Summit 2025 France: PaperAI',
+        link: '/application/ai-action-summit-2025-france-paper-ai',
+        socials: {
+            medium: '',
+            dev: '',
+            github: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['startup'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
+    },
+    {
+        uid: 'application-54',
+        title: 'Paper AI Tools Competition: Drive Data Innovation',
+        link: '/application/paper-ai-tools-competition',
+        socials: {
+            medium: '',
+            dev: '',
+            github: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay'],
+        applicationType: ['startup'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
+    },
+    {
+        uid: 'application-55',
+        title: 'Seeds for the Future: Global Ambassador Election',
+        link: '/application/seeds-for-the-future-ambassador',
+        socials: {
+            medium: '',
+            dev: '',
+            github: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        applicationStatus: 'rejected',
+        writingType: ['Interview'],
+        applicationType: ['conference', 'scholarship', 'fellowship', 'leadership'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
+    },
+    {
+        uid: 'application-56',
+        title: 'YC X2025 Application: Open Community & Innovation',
+        link: '/application/yc-x2025-open-community',
+        socials: {
+            medium: '',
+            dev: '',
+            github: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        applicationStatus: 'ongoing',
+        writingType: ['Q&A Essay'],
+        applicationType: ['startup'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
+    },
+    {
+        uid: 'application-57',
+        title: 'YC Summer 2024: CoMed Application for Healthcare Innovation',
+        link: '/application/yc-s2024-comed-application',
+        socials: {
+            medium: '',
+            dev: '',
+            github: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        applicationStatus: 'ongoing',
+        writingType: ['Q&A Essay'],
+        applicationType: ['startup'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
+    },
+    {
+        uid: 'application-58',
+        title: 'Artificial Intelligence in Health Competition, TEKNOFEST 2025',
+        link: '/application/artificial-intelligence-in-health-competition-teknofest-2025',
+        socials: {
+            medium: '',
+            dev: '',
+            github: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        applicationStatus: 'ongoing',
+        writingType: ['Q&A Essay'],
+        applicationType: ['competition'],
+        appliedYear: '2025',
+        requiredSubscription: 'paid'
+    },
+    {
+        uid: 'application-59',
+        title: 'PSL 2025 Cognitive Science Cover Letter: Impress Admissions',
+        link: '/application/psl-2025-cognitive-science-cover-letter',
+        socials: {
+            medium: '',
+            dev: '',
+            github: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        applicationStatus: 'ongoing',
+        writingType: ['Cover Letter'],
+        applicationType: ['graduate degree'],
+        appliedYear: '2025',
+        requiredSubscription: 'paid'
     },
 ]
