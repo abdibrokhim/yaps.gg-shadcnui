@@ -1,3 +1,5 @@
+// this is a default page when user types incorrect application slug.
+// we simply show it's locked and pro.
 import { SUBSCRIPTION_URL } from "@/lib/constants";
 
 import { Button } from "@/components/ui/button";

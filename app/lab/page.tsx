@@ -19,19 +19,7 @@ import { Spotlight } from "@/components/motion-primitives/spotlight"
 
 export default function LabPage() {
   return (
-    <div className="flex flex-col gap-6 relative h-full">
-      {/* header for now optional, pretty optional */}
-      {/* never uncomment this untill i will do myself */}
-      {/* <div className="flex flex-col gap-2">
-        <div className="flex items-center gap-2">
-          <FlaskConicalIcon className="h-6 w-6 text-primary" />
-          <h1 className="text-3xl font-bold tracking-tight">Lab Projects</h1>
-        </div>
-        <p className="text-muted-foreground">
-          Explore experimental projects and cutting-edge features in our innovation lab.
-        </p>
-      </div> */}
-
+    <div className="flex flex-col gap-6 relative h-full non-prose">
       {/* Projects Grid */}
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {LABS.map((lab) => (

@@ -212,11 +212,38 @@ export default function ExperiencePage() {
   }
   
   return (
-    <div className="space-y-8 w-full flex flex-col non-prose">
+    <div className="space-y-8 w-full flex flex-col non-prose mt-4">
       {/* Header section with stats */}
-      <div className="space-y-4">
+      <div className="flex flex-row justify-between items-center space-y-4">
+        <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
+          <div className="flex items-center gap-1.5">
+            <div className="w-3 h-3 rounded-sm bg-card border"></div>
+            <span>No activity</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <div className="w-3 h-3 rounded-sm bg-primary/20 border border-primary/40"></div>
+            <span>1 role</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <div className="w-3 h-3 rounded-sm bg-primary/40 border border-primary/60"></div>
+            <span>2 roles</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <div className="w-3 h-3 rounded-sm bg-primary/60 border border-primary/80"></div>
+            <span>3 roles</span>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <div className="w-3 h-3 rounded-sm bg-primary border border-primary"></div>
+            <span>4+ roles</span>
+          </div>
+          {selectedCategory && (
+            <div className="flex items-center gap-1.5 ml-2">
+              <div className="w-3 h-3 rounded-sm bg-pink-500/40 border border-pink-500/60 shadow-sm shadow-pink-500/30"></div>
+              <span>Matches filter</span>
+            </div>
+          )}
+        </div>
         <div className="flex items-center justify-between">
-          
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline" size="sm" className="gap-2">
@@ -249,35 +276,6 @@ export default function ExperiencePage() {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
-        </div>
-        
-        <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
-          <div className="flex items-center gap-1.5">
-            <div className="w-3 h-3 rounded-sm bg-card border"></div>
-            <span>No activity</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <div className="w-3 h-3 rounded-sm bg-primary/20 border border-primary/40"></div>
-            <span>1 role</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <div className="w-3 h-3 rounded-sm bg-primary/40 border border-primary/60"></div>
-            <span>2 roles</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <div className="w-3 h-3 rounded-sm bg-primary/60 border border-primary/80"></div>
-            <span>3 roles</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <div className="w-3 h-3 rounded-sm bg-primary border border-primary"></div>
-            <span>4+ roles</span>
-          </div>
-          {selectedCategory && (
-            <div className="flex items-center gap-1.5 ml-2">
-              <div className="w-3 h-3 rounded-sm bg-pink-500/40 border border-pink-500/60 shadow-sm shadow-pink-500/30"></div>
-              <span>Matches filter</span>
-            </div>
-          )}
         </div>
       </div>
       

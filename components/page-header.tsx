@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/breadcrumb"
 import { Separator } from "@/components/ui/separator"
 import { SidebarTrigger } from "@/components/ui/sidebar"
-import { BookOpen, FlaskConicalIcon, LifeBuoy, Send, SquareTerminal, Boxes, Moon, Sun, Sparkles, MoonStar, SunDim, Briefcase, Backpack, Box, Frame } from "lucide-react"
+import { BookOpen, FlaskConicalIcon, LifeBuoy, Send, SquareTerminal, Boxes, Moon, Sun, Sparkles, MoonStar, SunDim, Briefcase, Backpack, Box, Frame, PackageOpen } from "lucide-react"
 import Link from "next/link"
 import { useTheme } from "next-themes"
 import {
@@ -58,6 +58,11 @@ export default function PageHeader() {
       return {
         title: "Experience",
         icon: <Box className="h-5 w-5" />,
+      }
+    } else if (pathname.startsWith("/application")) {
+      return {
+        title: "Applications",
+        icon: <PackageOpen className="h-5 w-5" />,
       }
     } else if (pathname.startsWith("/socials")) {
       return {

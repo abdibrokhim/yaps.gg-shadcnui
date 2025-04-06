@@ -14,6 +14,7 @@ import {
   Frame,
   LifeBuoy,
   Map,
+  PackageOpen,
   PieChart,
   Send,
   Settings2,
@@ -73,6 +74,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         url: "/experience",
         icon: Box,
         isActive: pathname.startsWith("/experience"),
+      },
+      {
+        title: "Applications",
+        url: "/application",
+        icon: PackageOpen,
+        isActive: pathname.startsWith("/application"),
       },
     ],
     navSecondary: [
