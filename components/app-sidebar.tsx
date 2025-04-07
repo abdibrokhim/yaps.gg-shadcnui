@@ -35,15 +35,16 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import { EMAIL_URL, BOOK_A_CALL_URL, NAME, IMAGE_URL } from "@/lib/constants"
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const pathname = usePathname()
   
   const data = {
     user: {
-      name: "abdibrokhim",
-      email: "abdibrokhim@gmail.com",
-      avatar: "/images/abdibrokhim.jpeg",
+      name: NAME,
+      email: EMAIL_URL,
+      avatar: IMAGE_URL,
     },
     navMain: [
       {
@@ -86,17 +87,17 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     navSecondary: [
       {
         title: "Support",
-        url: "mailto:abdibrokhim@gmail.com",
+        url: EMAIL_URL,
         icon: LifeBuoy,
       },
       {
         title: "Feedback",
-        url: "mailto:abdibrokhim@gmail.com",
+        url: EMAIL_URL,
         icon: Send,
       },
       {
         title: "Book a Call",
-        url: "https://cal.com/abdibrokhim",
+        url: BOOK_A_CALL_URL,
         icon: Calendar,
       },
     ],

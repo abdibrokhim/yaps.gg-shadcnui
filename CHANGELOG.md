@@ -4,6 +4,10 @@ just to make sure i was not sleeping all the time.
 
 ## v0.0.2
 
+### 8th April, 2025
+- added more applications
+- ui/ux design applications section
+
 ### 7th April, 2025
 - all applications were added
 - added book a call to sidebar
