@@ -17,7 +17,7 @@ import {
 } from '@/components/ui/tabs'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { BookOpen, ChevronDown, ChevronRight, ListCollapse, CircleDollarSign, User, Youtube, ListFilter, PenBox, Trophy, Copy } from 'lucide-react'
+import { BookOpen, ChevronDown, ChevronRight, ListCollapse, CircleDollarSign, User, Youtube, ListFilter, PenBox, Trophy, Copy, RotateCcw, Check } from 'lucide-react'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -94,6 +94,13 @@ export default function ApplicationsPage() {
     }))
   }
 
+  const resetFilters = () => {
+    setSelectedStatus('all')
+    setSelectedYear('all')
+    setSelectedType('all')
+    toast.success("All filters reset")
+  }
+
   return (
     <div className="mx-auto mt-4 not-prose">
       <div className="flex justify-between items-center mb-8">
@@ -103,7 +110,7 @@ export default function ApplicationsPage() {
         <div className="flex flex-col sm:flex-row gap-4">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="sm" className="gap-2">
+              <Button variant="outline" size="sm" className="gap-2 cursor-pointer">
                 <ListFilter className="h-4 w-4" />
                 {selectedStatus === 'all' ? 'Filter by status' : selectedStatus.charAt(0).toUpperCase() + selectedStatus.slice(1)}
                 <ChevronRight className="h-4 w-4" />
@@ -136,7 +143,7 @@ export default function ApplicationsPage() {
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="sm" className="gap-2">
+              <Button variant="outline" size="sm" className="gap-2 cursor-pointer">
                 <ListFilter className="h-4 w-4" />
                 {selectedYear === 'all' ? 'Filter by year' : selectedYear}
                 <ChevronRight className="h-4 w-4" />
@@ -169,7 +176,7 @@ export default function ApplicationsPage() {
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="sm" className="gap-2">
+              <Button variant="outline" size="sm" className="gap-2 cursor-pointer">
                 <ListFilter className="h-4 w-4" />
                 {selectedType === 'all' ? 'Filter by type' : selectedType}
                 <ChevronRight className="h-4 w-4" />
@@ -199,6 +206,16 @@ export default function ApplicationsPage() {
               ))}
             </DropdownMenuContent>
           </DropdownMenu>
+
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className="gap-2 cursor-pointer" 
+            onClick={resetFilters}
+            disabled={selectedStatus === 'all' && selectedYear === 'all' && selectedType === 'all'}
+          >
+            <RotateCcw className="h-4 w-4" />
+          </Button>
         </div>
       </div>
       
