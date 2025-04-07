@@ -223,7 +223,7 @@ export default function ApplicationsPage() {
         <TabsContent value="grid" className="space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredApplications.map((app) => (
-              <Card key={app.uid} className="py-2 h-full overflow-hidden transition-colors hover:bg-muted/50">
+              <Card key={app.uid} className="py-4 h-full overflow-hidden transition-colors hover:bg-muted/50">
                 <Link href={app.link} className="h-full">
                   <CardHeader className="px-4">
                     <div className="flex items-center justify-between">

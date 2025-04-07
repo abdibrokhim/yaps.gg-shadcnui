@@ -7,6 +7,7 @@ import {
   MoreHorizontal,
   Share,
   Trash2,
+  Twitter,
   type LucideIcon,
 } from "lucide-react"
 
@@ -69,8 +70,8 @@ export function NavProjects({
                     window.open(`https://x.com/intent/post?text=${encodeURIComponent(text)}`, '_blank');
                   }}
                 >
-                  <Bomb className="text-muted-foreground" />
-                  <span>Explode this dude</span>
+                  <Twitter className="text-muted-foreground" />
+                  <span>tweet this</span>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>

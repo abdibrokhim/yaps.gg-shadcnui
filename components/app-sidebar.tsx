@@ -14,6 +14,7 @@ import {
   FlaskConicalIcon,
   Frame,
   LifeBuoy,
+  Logs,
   Map,
   PackageOpen,
   PieChart,
@@ -107,6 +108,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         url: "/socials",
         icon: Frame,
         isActive: pathname.startsWith("/socials"),
+      },
+      {
+        name: "I do take notes",
+        url: "/wrapped",
+        icon: Logs,
+        isActive: pathname.startsWith("/wrapped"),
       },
     ],
   }

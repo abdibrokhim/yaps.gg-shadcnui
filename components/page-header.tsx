@@ -69,6 +69,11 @@ export default function PageHeader() {
         title: "Socials",
         icon: <Frame className="h-5 w-5" />,
       }
+    } else if (pathname.startsWith("/wrapped")) {
+      return {
+        title: "Wrapped",
+        icon: <PackageOpen className="h-5 w-5" />,
+      }
     } else {
       return {
         title: "Playground",

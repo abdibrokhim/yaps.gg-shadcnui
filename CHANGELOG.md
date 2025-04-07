@@ -8,6 +8,7 @@ just to make sure i was not sleeping all the time.
 - added more applications
 - ui/ux design applications section
 - added reset filters button
+- added wrapped section
 
 ### 7th April, 2025
 - all applications were added
