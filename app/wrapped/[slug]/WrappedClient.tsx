@@ -94,9 +94,10 @@ export default function WrappedClient({ wrapped }: { wrapped: Wrapped }) {
       <div className="mb-8">
         <div className="flex flex-col gap-4">
           <div className="flex justify-between items-start">
-            <h1 className="scroll-m-20 font-bold tracking-tight">{wrapped.ps}</h1>
+            <h1 className="scroll-m-20 text-4xl font-bold tracking-tight">{wrapped.title}</h1>
             <ShareDropdown wrapped={wrapped} onCopy={handleCopy} />
           </div>
+          <p className="text-xl text-muted-foreground">{wrapped.ps}</p>
         </div>
         
         <Separator className="my-6" />
