@@ -2,6 +2,12 @@
 
 just to make sure i was not sleeping all the time.
 
+## v0.0.3
+
+### 9th April, 2025
+- Zarin is a free, open-source AI chat app with multi-model support
+
+
 ## v0.0.2
 
 ### 8th April, 2025
@@ -21,10 +27,10 @@ just to make sure i was not sleeping all the time.
 - adding more and more applications [here](/app/application/)
 
 ### 5th April, 2025
-- just added application. will be listing all my applications here.
+- just added application. will be listing all my applications here
 
 ### 5th April, 2025
-- added promo video for .env (aka take trash) app.
+- added promo video for .env (aka take trash) app
 
 ### 4th April, 2025
 - made copy/sharing more accessible
@@ -33,7 +39,7 @@ just to make sure i was not sleeping all the time.
 ## v0.0.1
 
 ### 4th April, 2025
-- added timeline to experience page. it looks hyper cool.
+- added timeline to experience page. it looks hyper cool
 - added card hover effect. love pink color!!
 - filters are more cool now
 - spotlight effect on cards
