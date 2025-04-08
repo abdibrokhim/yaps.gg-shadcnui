@@ -23,6 +23,7 @@ import Link from "next/link"
 import PageHeader from "@/components/page-header"
 import { cn } from "@/lib/utils"
 import { Toaster } from 'sonner'
+import Script from 'next/script'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -116,6 +117,11 @@ export default function RootLayout({
 }) {
   return (
     <html className='bg-sidebar' lang="en" suppressHydrationWarning>
+      <Script
+        async
+        src="https://cloud.umami.is/script.js"
+        data-website-id="d9adca9d-30eb-482f-8f5f-d515dc203c67"
+      />
       <head />
       <body className={cn('min-h-screen bg-sidebar font-sans antialiased overflow-x-hidden', geist.variable, geistMono.variable)}>
         <ThemeProvider
