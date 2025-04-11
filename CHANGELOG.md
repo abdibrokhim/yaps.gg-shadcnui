@@ -4,6 +4,11 @@ just to make sure i was not sleeping all the time.
 
 ## v0.0.3
 
+### 11th April, 2025
+- new layout for entrance page
+- added Zarin and few experiences
+- slug params fixed
+
 ### 9th April, 2025
 - Zarin is a free, open-source AI chat app with multi-model support
 

@@ -18,6 +18,16 @@ export type Thing = {
 
 export const THINGS: Thing[] = [
     {
+        uid: 'thing--1',
+        title: 'Zarin',
+        description: 'Zarin is a free, open-source AI chat app with multi-model support. Powered by AI/ML API.',
+        link: '/thing/zarin',
+        url: 'https://zarin.vercel.app/',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/zarin.png',
+        youtube: 'https://youtu.be/thQqVQqt-og?si=3xJN8griWrhUxpG7',
+        github: 'https://github.com/abdibrokhim/zarin',
+    },
+    {
         uid: 'thing-0',
         title: '.env',
         description: 'touch grass alternative | viral productivity app.',
@@ -27,7 +37,7 @@ export const THINGS: Thing[] = [
         youtube: 'https://www.youtube.com/watch?v=jh4Tf1nSteM',
         github: 'https://github.com/abdibrokhim/Plant-Tree',
         hackathon: {
-            winner: 'in-progress',
+            winner: 'loser',
         },
     },
     {

@@ -20,6 +20,43 @@ type Experience = {
 
 export const EXPERIENCES: Experience[] = [
     {
+        uid: 'experience--2',
+        title: 'Upwork',
+        description: 'Upwork is a global freelancing platform that connects businesses with independent professionals.',
+        link: '/experience/upwork',
+        url: 'https://www.upwork.com',
+        responsibilities: [
+            {
+                description: 'Integrated Creatio and Stripe into SaaS platform',
+            },
+            {
+                description: 'Built cloud based software custom macros',
+            },
+        ],
+        metadata: {
+            position: 'Software Engineer Freelance',
+            startDate: 'January 2025',
+            endDate: 'Present',
+        },
+    },
+    {
+        uid: 'experience--1',
+        title: 'Click',
+        description: 'Our mission is to make financial relations between people and companies simple, protected and reliable.',
+        link: '/experience/clickuz',
+        url: 'https://click.uz/',
+        responsibilities: [
+            {
+                description: 'drop out',
+            },
+        ],
+        metadata: {
+            position: 'Mobile Application Developer',
+            startDate: 'February 2025',
+            endDate: 'March 2025',
+        },
+    },
+    {
         uid: 'experience-0',
         title: 'Huawei',
         description: 'Huawei Technologies Co., Ltd',
@@ -27,13 +64,13 @@ export const EXPERIENCES: Experience[] = [
         url: 'https://www.huawei.com',
         responsibilities: [
             {
-                description: 'Vibe coding AI Neural Network chips into the human brain.',
+                description: 'drop out',
             },
         ],
         metadata: {
-            position: 'Vibe Coder',
+            position: 'Network Engineer Intern',
             startDate: 'April 2025',
-            endDate: 'Present',
+            endDate: 'May 2025',
         },
     },
     {

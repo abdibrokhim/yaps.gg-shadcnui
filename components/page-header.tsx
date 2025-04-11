@@ -106,18 +106,22 @@ export default function PageHeader() {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem className="hidden md:block">
-              <BreadcrumbLink href={pathname === "/" ? "/" : pathname.split("/")[1]}>
+              <BreadcrumbLink href={pathname === "/" ? "/" : `/${pathname.split("/")[1]}`}>
                 <div className="flex items-center gap-2">
                   {icon}
                   <span>{title}</span>
                 </div>
               </BreadcrumbLink>
             </BreadcrumbItem>
-            {pathname !== "/" && (
+            {pathname !== "/" && pathname.split("/").filter(Boolean).length > 1 && (
               <>
                 <BreadcrumbSeparator className="hidden md:block" />
                 <BreadcrumbItem>
-                  <BreadcrumbPage>{pathname.split("/").filter(Boolean).pop()}</BreadcrumbPage>
+                  <BreadcrumbPage>
+                    <BreadcrumbLink href={pathname === "/" ? "/" : pathname.split("/")[0]}>
+                      {pathname.split("/").filter(Boolean)[1]}
+                    </BreadcrumbLink>
+                  </BreadcrumbPage>
                 </BreadcrumbItem>
               </>
             )}
