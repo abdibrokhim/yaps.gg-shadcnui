@@ -26,6 +26,10 @@ export const THINGS: Thing[] = [
         cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/douaa.png',
         youtube: 'https://youtu.be/ymKp6GYGPy8?si=_3YYf2oZmNMhYBK1',
         github: 'https://github.com/abdibrokhim/douaa',
+        hackathon: {
+            winner: 'winner',
+            prize: '$150',
+        },
     },
     {
         uid: 'thing--1',
