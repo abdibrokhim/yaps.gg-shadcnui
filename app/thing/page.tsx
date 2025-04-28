@@ -26,6 +26,7 @@ import { Separator } from "@/components/ui/separator"
 import { toast } from "sonner"
 import { Badge } from "@/components/ui/badge"
 import { YapsTooltip } from "@/components/yaps-tooltip"
+import { cn } from "@/lib/utils"
 
 // Card that handles navigation but allows button clicks without nesting <a> tags
 function ThingCard({ 
@@ -68,7 +69,10 @@ function ThingCard({
   
   return (
     <Card 
-      className="py-4 h-full overflow-hidden transition-colors hover:bg-muted/50 cursor-pointer flex flex-col"
+      className={cn(
+        "py-4 h-full overflow-hidden transition-colors hover:bg-muted/50 cursor-pointer flex flex-col",
+        thing.uid === 'thing--2' && 'border-1 border-primary'
+      )}
       onClick={handleCardClick}
     >
       <div className="px-4 relative">

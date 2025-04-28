@@ -18,6 +18,16 @@ export type Thing = {
 
 export const THINGS: Thing[] = [
     {
+        uid: 'thing--2',
+        title: 'Douaa',
+        description: 'The first open-source AI Agent for OLX.',
+        link: '/thing/douaa',
+        url: 'https://douaa.vercel.app/',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/douaa.png',
+        youtube: 'https://youtu.be/ymKp6GYGPy8?si=_3YYf2oZmNMhYBK1',
+        github: 'https://github.com/abdibrokhim/douaa',
+    },
+    {
         uid: 'thing--1',
         title: 'Zarin',
         description: 'Zarin is a free, open-source AI chat app with multi-model support. Powered by AI/ML API.',
