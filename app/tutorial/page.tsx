@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { useState } from "react"
 import { Separator } from "@/components/ui/separator"
+import { cn } from "@/lib/utils"
 
 // Type definitions to match data.ts
 type Tutorial = typeof TUTORIALS[0];
@@ -49,7 +50,10 @@ function TutorialCard({
   
   return (
     <Card 
-      className="py-4 h-full overflow-hidden transition-colors hover:bg-muted/50 cursor-pointer flex flex-col"
+      className={cn(
+        "py-4 h-full overflow-hidden transition-colors hover:bg-muted/50 cursor-pointer flex flex-col",
+        tutorial.uid === 'blog-28' && 'border-1 border-primary animate-pulse'
+      )}
       onClick={handleCardClick}
     >
       <div className="px-4">

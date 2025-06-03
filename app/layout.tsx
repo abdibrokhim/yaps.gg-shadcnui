@@ -6,20 +6,8 @@ import { ThemeProvider } from 'next-themes'
 import { SidebarProvider } from '@/components/ui/sidebar'
 import { AppSidebar } from "@/components/app-sidebar"
 import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import { Separator } from "@/components/ui/separator"
-import {
   SidebarInset,
-  SidebarTrigger,
 } from "@/components/ui/sidebar"
-import { SquareTerminal } from "lucide-react"
-import Link from "next/link"
 import PageHeader from "@/components/page-header"
 import { cn } from "@/lib/utils"
 import { Toaster } from 'sonner'

@@ -30,7 +30,9 @@ import {
 } from "@/components/ui/sidebar"
 
 import Link from "next/link"
-import { SUBSCRIPTION_URL, REPO_URL_FORK, REPO_URL_STAR } from "@/lib/constants"
+import { SUBSCRIPTION_URL, REPO_URL_FORK, REPO_URL_STAR, EMAIL_URL_LINK } from "@/lib/constants"
+import DonationDialog from "./donation-dialog"
+import { Button } from "./ui/button"
 
 export function NavUser({
   user,
@@ -82,15 +84,6 @@ export function NavUser({
               </div>
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
-            {/* <DropdownMenuGroup>
-              <DropdownMenuItem>
-                <HandHeart />
-                <Link href={SUBSCRIPTION_URL}>
-                  Donate & Support
-                </Link>
-              </DropdownMenuItem>
-            </DropdownMenuGroup> */}
-            {/* <DropdownMenuSeparator /> */}
             <DropdownMenuGroup>
               <DropdownMenuItem>
                 <GitFork />
@@ -106,12 +99,14 @@ export function NavUser({
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
-              <HandHeart />
-                <Link href={SUBSCRIPTION_URL}>
+            <DonationDialog>
+              <DropdownMenuItem asChild>
+                <button className="flex w-full items-center gap-2 text-left">
+                  <HandHeart />
                   Donate & Support
-                </Link>
-            </DropdownMenuItem>
+                </button>
+              </DropdownMenuItem>
+            </DonationDialog>
           </DropdownMenuContent>
         </DropdownMenu>
       </SidebarMenuItem>

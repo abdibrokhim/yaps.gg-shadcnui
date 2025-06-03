@@ -71,7 +71,7 @@ function ThingCard({
     <Card 
       className={cn(
         "py-4 h-full overflow-hidden transition-colors hover:bg-muted/50 cursor-pointer flex flex-col",
-        thing.uid === 'thing--2' && 'border-1 border-primary'
+        thing.uid === 'thing--3' && 'border-1 border-primary animate-pulse'
       )}
       onClick={handleCardClick}
     >

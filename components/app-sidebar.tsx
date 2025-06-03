@@ -36,7 +36,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { EMAIL_URL, BOOK_A_CALL_URL, NAME, IMAGE_URL } from "@/lib/constants"
+import { EMAIL_URL, BOOK_A_CALL_URL, NAME, IMAGE_URL, EMAIL_URL_LINK } from "@/lib/constants"
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const pathname = usePathname()
@@ -88,12 +88,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     navSecondary: [
       {
         title: "Support",
-        url: EMAIL_URL,
+        url: EMAIL_URL_LINK,
         icon: LifeBuoy,
       },
       {
         title: "Feedback",
-        url: EMAIL_URL,
+        url: EMAIL_URL_LINK,
         icon: Send,
       },
       {

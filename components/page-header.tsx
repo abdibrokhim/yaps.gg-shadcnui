@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/breadcrumb"
 import { Separator } from "@/components/ui/separator"
 import { SidebarTrigger } from "@/components/ui/sidebar"
-import { BookOpen, FlaskConicalIcon, LifeBuoy, Send, SquareTerminal, Boxes, Moon, Sun, Sparkles, MoonStar, SunDim, Briefcase, Backpack, Box, Frame, PackageOpen } from "lucide-react"
+import { BookOpen, FlaskConicalIcon, LifeBuoy, Send, SquareTerminal, Boxes, Moon, Sun, Sparkles, MoonStar, SunDim, Briefcase, Backpack, Box, Frame, PackageOpen, Copy, HandHeart } from "lucide-react"
 import Link from "next/link"
 import { useTheme } from "next-themes"
 import {
@@ -23,6 +23,10 @@ import {
 import { Button } from "@/components/ui/button"
 import { useEffect, useState } from "react"
 import { SUBSCRIPTION_URL } from "@/lib/constants"
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogTrigger } from "@/components/ui/dialog"
+import { SOLANA_ADDRESS, BITCOIN_ADDRESS, ETHEREUM_ADDRESS, TETHER_ADDRESS, BINANCE_ADDRESS } from "@/lib/constants"
+import { toast } from "sonner"
+import DonationDialog from "./donation-dialog"
 
 export default function PageHeader() {
   const pathname = usePathname()
@@ -92,6 +96,19 @@ export default function PageHeader() {
     setTheme("dark")
   }, [setTheme])
 
+  const handleCopy = (addr: string) => {
+    navigator.clipboard.writeText(addr);
+    toast.success("Copied to clipboard")
+  };
+
+  const addresses = [
+    { label: "SOLANA", value: SOLANA_ADDRESS },
+    { label: "BITCOIN", value: BITCOIN_ADDRESS },
+    { label: "ETHEREUM", value: ETHEREUM_ADDRESS },
+    { label: "TETHER", value: TETHER_ADDRESS },
+    { label: "BINANCE", value: BINANCE_ADDRESS },
+  ];
+
   // Prevent hydration mismatch
   if (!mounted) return null
 
@@ -130,6 +147,11 @@ export default function PageHeader() {
       </div>
       
       <div className="flex items-center px-4">
+        <DonationDialog>
+          <Button variant="ghost" size="icon" className="cursor-pointer">
+            <HandHeart className="h-5 w-5" />
+          </Button>
+        </DonationDialog>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" size="icon" className="cursor-pointer">

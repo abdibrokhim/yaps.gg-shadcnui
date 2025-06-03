@@ -18,6 +18,20 @@ export type Thing = {
 
 export const THINGS: Thing[] = [
     {
+        uid: 'thing--3',
+        title: 'Wei',
+        description: '🌱 Wei: The AI Agents For Personal Growth.',
+        link: '/thing/wei',
+        url: 'https://wei.yaps.gg',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/wei/main/public/assets/arch-full.png',
+        youtube: 'https://youtu.be/LoGBseW_iVY',
+        github: 'https://github.com/abdibrokhim/wei',
+        hackathon: {
+            winner: 'winner',
+            prize: '$300',
+        },
+    },
+    {
         uid: 'thing--2',
         title: 'Douaa',
         description: 'The first open-source AI Agent for OLX.',

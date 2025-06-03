@@ -464,6 +464,38 @@ export const TUTORIALS: Tutorial[] = [
             linkedin: 'https://www.linkedin.com/posts/opencommunity_just-uploaded-my-first-ever-rust-video-tutorial-activity-7296255009766170624-VhAt?utm_source=share&utm_medium=member_desktop&rcm=ACoAADt2h8MBtHotRGgb_ePOpWusMY9VKCqELw8',
         },
     },
+    {
+        uid: 'blog-28',
+        title: 'How To Build End-To-End AI Voice Agentic App Using AI/ML API and OpenAI Realtime API',
+        description:
+            'In this tutorial, I\'ll be guiding you through the whole process of building Wei. This is a pretty comprehensive tutorial, so I\'ll be covering a lot of ground. Cool part we\'ll build AI Agents SDK from scratch (referring to the official OpenAI Agents Python SDK).',
+        link: '/tutorial/ai-voice-agentic-app-openai-realtime-ai-ml-api',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/wei/main/public/assets/arch-full.png',
+        socials: {
+            medium: 'https://medium.com/@abdibrokhim/how-to-build-end-to-end-ai-voice-agentic-app-using-ai-ml-api-and-openai-realtime-api-1b88597795c4',
+            dev: 'https://dev.to/abdibrokhim/how-to-build-end-to-end-ai-voice-agentic-app-using-aiml-api-and-openai-realtime-api-33n4',
+            github: 'https://github.com/abdibrokhim/wei/blob/main/TUTORIAL.md',
+            youtube: 'https://youtu.be/LoGBseW_iVY',
+            twitter: 'https://x.com/abdibrokhim/status/1922329856747946422',
+            linkedin: 'https://www.linkedin.com/posts/abdibrokhim_how-to-build-end-to-end-ai-voice-agentic-activity-7328395030933516289-Pg-N?utm_source=share&utm_medium=member_desktop&rcm=ACoAADt2h8MBtHotRGgb_ePOpWusMY9VKCqELw8',
+        },
+    },
+    {
+        uid: 'blog-29',
+        title: 'How I Built Italian Brainrot AI Animals Alternative using AI/ML API',
+        description:
+            'Learn step-by-step to create an Italian Brainrot AI Animals Alternative using AI/ML API.',
+        link: '/tutorial/italian-brainrot-ai-animals-alternative',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/anora-tutorial/main/images/architecture.png',
+        socials: {
+            medium: 'https://medium.com/@abdibrokhim/how-i-built-italian-brainrot-ai-animals-alternative-using-ai-ml-api-69a80cf0ec12',
+            dev: 'https://dev.to/abdibrokhim/how-i-built-italian-brainrot-ai-animals-alternative-using-aiml-api-3cai',
+            github: 'https://github.com/abdibrokhim/anora-tutorial',
+            youtube: 'https://youtu.be/51B4GolBl5o',
+            twitter: 'https://x.com/abdibrokhim/status/1922567218849591667',
+            linkedin: 'https://www.linkedin.com/posts/abdibrokhim_how-i-built-italian-brainrot-ai-animals-alternative-activity-7330211269989347330-tI1G?utm_source=share&utm_medium=member_desktop&rcm=ACoAADt2h8MBtHotRGgb_ePOpWusMY9VKCqELw8',
+        },
+    },
 ]
 
 export const TUTORIALS_BY_UID = TUTORIALS.reduce((acc, tutorial) => {
