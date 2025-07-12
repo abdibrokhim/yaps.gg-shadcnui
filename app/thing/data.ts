@@ -18,6 +18,20 @@ export type Thing = {
 
 export const THINGS: Thing[] = [
     {
+        uid: 'thing--4',
+        title: 'Create Stunning AI Characters in Seconds',
+        description: 'Professional 3D character assets powered by Recraft v3. Choose from 39+ art styles, customize colors, and generate Cinema4D quality renders with commercial licensing.',
+        link: '/thing/character-ai',
+        url: 'https://ai-game-asset-generator.vercel.app/',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/ai%20character%20generator.png',
+        youtube: 'https://youtu.be/0N7LVQRGBlQ',
+        github: 'https://github.com/TechWithAbee/ai-game-asset-generator',
+        hackathon: {
+            winner: 'winner',
+            prize: '$200',
+        },
+    },
+    {
         uid: 'thing--3',
         title: 'Wei',
         description: '🌱 Wei: The AI Agents For Personal Growth.',
