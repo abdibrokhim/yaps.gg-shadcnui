@@ -24,6 +24,23 @@ type Application = {
 
 export const APPLICATIONS: Application[] = [
     {
+        uid: 'application-60',
+        title: 'Adventure X 2025, Was It Fair?',
+        link: '/application/adventurex-2025',
+        socials: {
+            medium: 'https://medium.com/@abdibrokhim/adventure-x-2025-was-it-fair-061f45585bf3',
+            dev: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        applicationStatus: 'rejected',
+        writingType: ['Essay'],
+        applicationType: ['hackathon'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
+    },
+    {
         uid: 'application-59',
         title: 'PSL 2025 Cognitive Science, Statement of Objectives',
         link: '/application/psl-2025-cognitive-science-statement-of-objectives',
