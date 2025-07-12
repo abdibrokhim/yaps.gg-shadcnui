@@ -52,7 +52,7 @@ function TutorialCard({
     <Card 
       className={cn(
         "py-4 h-full overflow-hidden transition-colors hover:bg-muted/50 cursor-pointer flex flex-col",
-        tutorial.uid === 'blog-28' && 'border-1 border-primary animate-pulse'
+        tutorial.uid === 'blog-32' && 'border-1 border-primary animate-pulse'
       )}
       onClick={handleCardClick}
     >

@@ -496,6 +496,51 @@ export const TUTORIALS: Tutorial[] = [
             linkedin: 'https://www.linkedin.com/posts/abdibrokhim_how-i-built-italian-brainrot-ai-animals-alternative-activity-7330211269989347330-tI1G?utm_source=share&utm_medium=member_desktop&rcm=ACoAADt2h8MBtHotRGgb_ePOpWusMY9VKCqELw8',
         },
     },
+    {
+        uid: 'blog-30',
+        title: 'Integrating Keywords AI into AI Agentic',
+        description: '🚀 Building AI agents but struggling to monitor their performance? Here\'s how I integrated Keywordsai into my AI agent system to get enterprise-grade observability, analytics, and cost tracking.',
+        link: '/tutorial/keywordsai-ai-agentic',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/keywords-ai-wei.png',
+        socials: {
+            medium: 'https://medium.com/@abdibrokhim/integrating-keywords-ai-into-ai-agentic-020959b8b13a',
+            dev: 'https://dev.to/abdibrokhim/integrating-keywords-ai-into-ai-agentic-apps-553e',
+            github: 'https://github.com/Anora-Labs/eliza-agent-orchestration/tree/keywordsai-intg',
+            youtube: 'https://youtu.be/WgZ46XATp6U?si=WsvUZRswZipJbisV',
+            twitter: 'https://x.com/abdibrokhim/status/1938252844018049067',
+            linkedin: '',
+        },
+    },
+    {
+        uid: 'blog-31',
+        title: 'Integrating Mem0 into AI Agentic Apps',
+        description: '🚀 Want your AI agents to remember past conversations and learn from user interactions? Here\'s how I integrated @mem0ai into my AI agent system to give them persistent, intelligent memory.',
+        link: '/tutorial/mem0-ai-agentic',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/mem0-wei.png',
+        socials: {
+            medium: 'https://medium.com/@abdibrokhim/integrating-mem0-into-ai-agentic-apps-7e9dd58e9adc',
+            dev: 'https://dev.to/abdibrokhim/give-your-ai-agents-persistent-memory-with-mem0-3eff',
+            github: 'https://github.com/Anora-Labs/eliza-agent-orchestration/tree/',
+            youtube: 'https://youtu.be/WgZ46XATp6U?si=WsvUZRswZipJbisV',
+            twitter: 'https://x.com/abdibrokhim/status/1937787503786033647',
+            linkedin: '',
+        },
+    },
+    {
+        uid: 'blog-32',
+        title: 'How to Give Your AI Agents Real-Time Search Superpowers with Tavily',
+        description: 'This article demonstrates a real-world implementation of Tavily search integration in an AI agent system. The code examples are taken from actual production code in the open-source Wei AI Agent project.',
+        link: '/tutorial/tavily-ai-agentic',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/tavily-and-wei.png',
+        socials: {
+            medium: 'https://medium.com/@abdibrokhim/how-to-give-your-ai-agents-real-time-search-superpowers-with-tavily-c21fd8aa8cb7',
+            dev: 'https://dev.to/abdibrokhim/how-to-give-your-ai-agents-real-time-search-superpowers-with-tavily-3398',
+            github: 'https://github.com/Anora-Labs/eliza-agent-orchestration/tree/',
+            youtube: 'https://youtu.be/WgZ46XATp6U?si=WsvUZRswZipJbisV',
+            twitter: 'https://x.com/abdibrokhim/status/1937491006414373314',
+            linkedin: '',
+        },
+    },
 ]
 
 export const TUTORIALS_BY_UID = TUTORIALS.reduce((acc, tutorial) => {

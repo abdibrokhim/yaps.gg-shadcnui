@@ -18,6 +18,34 @@ export type Thing = {
 
 export const THINGS: Thing[] = [
     {
+        uid: 'thing--6',
+        title: 'Eliza: AI Agent Orchestration',
+        description: 'Introducing Wei – The Enterprise-Grade AI Agent For Personal Growth. Wei is part of the Eliza Agent Orchestration with advanced memory, real-time search, and comprehensive analytics.',
+        link: '/thing/eliza',
+        url: 'https://eliza.yaps.gg',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/eliza.png',
+        youtube: 'https://youtu.be/WgZ46XATp6U?si=WsvUZRswZipJbisV',
+        github: 'https://github.com/Anora-Labs/eliza-agent-orchestration/tree/keywordsai-intg',
+        hackathon: {
+            winner: 'winner',
+            prize: '$200',
+        },
+    },
+    {
+        uid: 'thing--5',
+        title: 'Blender MCP (create 3D models by chatting)',
+        description: 'An innovative Model Context Protocol (MCP) implementation that seamlessly connects Blender with AI language models and CSM.ai\'s 3D asset ecosystem.',
+        link: '/thing/blender-mcp',
+        url: '',
+        cover: 'https://raw.githubusercontent.com/abdibrokhim/cover-images/main/blender-mcp.png',
+        youtube: 'https://youtu.be/ozh-pAK1HPQ',
+        github: 'https://github.com/TechWithAbee/blender-model-context-protocol',
+        hackathon: {
+            winner: 'winner',
+            prize: '$1000',
+        },
+    },
+    {
         uid: 'thing--4',
         title: 'Create Stunning AI Characters in Seconds',
         description: 'Professional 3D character assets powered by Recraft v3. Choose from 39+ art styles, customize colors, and generate Cinema4D quality renders with commercial licensing.',
