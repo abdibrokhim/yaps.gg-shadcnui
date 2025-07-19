@@ -20,6 +20,40 @@ type Experience = {
 
 export const EXPERIENCES: Experience[] = [
     {
+        uid: 'experience--4',
+        title: 'Moonshot Pirates',
+        description: 'WHERE GEN Z INNOVATORS SHAPE THE FUTURE',
+        link: '/experience/moonshot-pirates',
+        url: 'https://moonshotpirates.com',
+        responsibilities: [
+            {
+                description: 'Mentored 2600+ young entrepreneurs in product development and open-source tooling.',
+            },
+        ],
+        metadata: {
+            position: 'Startups & AI Mentor',
+            startDate: 'July 2025',
+            endDate: 'Present',
+        },
+    },
+    {
+        uid: 'experience--3',
+        title: 'ANORA',
+        description: 'Intelligent Canvas For Infinite Creativity',
+        link: '/experience/anora',
+        url: 'https://anora.yaps.gg',
+        responsibilities: [
+            {
+                description: 'Building AI-Native platform enabling designers and artists to generate and refine images, video, text in one intelligent canvas.',
+            },
+        ],
+        metadata: {
+            position: 'Founder & CEO',
+            startDate: 'May 2025',
+            endDate: 'Present',
+        },
+    },
+    {
         uid: 'experience--2',
         title: 'Upwork',
         description: 'Upwork is a global freelancing platform that connects businesses with independent professionals.',
@@ -36,7 +70,7 @@ export const EXPERIENCES: Experience[] = [
         metadata: {
             position: 'Software Engineer Freelance',
             startDate: 'January 2025',
-            endDate: 'Present',
+            endDate: 'May 2025',
         },
     },
     {
@@ -398,7 +432,7 @@ export const EXPERIENCES: Experience[] = [
         metadata: {
             position: 'Founder, CEO & Content Creator',
             startDate: 'December 2024',
-            endDate: 'Present',
+            endDate: 'January 2025',
         },
     },
     {

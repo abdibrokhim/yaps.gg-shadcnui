@@ -24,6 +24,23 @@ type Application = {
 
 export const APPLICATIONS: Application[] = [
     {
+        uid: 'application-61',
+        title: 'Hack the North 2025',
+        link: '/application/hack-the-north-2025',
+        socials: {
+            medium: '',
+            dev: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        applicationStatus: 'ongoing',
+        writingType: ['Q&A Essay'],
+        applicationType: ['hackathon'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
+    },
+    {
         uid: 'application-60',
         title: 'Adventure X 2025, Was It Fair?',
         link: '/application/adventurex-2025',
