@@ -24,6 +24,23 @@ type Application = {
 
 export const APPLICATIONS: Application[] = [
     {
+        uid: 'application-65',
+        title: 'The EITN EBRAINS Fall School in Computational Neuroscience',
+        link: '/application/eitn-ebrains-fall-school-in-computational-neuroscience',
+        socials: {
+            medium: '',
+            dev: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        applicationStatus: 'in-progress',
+        writingType: ['Q&A Essay'],
+        applicationType: ['scholarship', 'fellowship'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
+    },
+    {
         uid: 'application-64',
         title: 'Letter of Motivation | Slovakia Masters Degree | Software Engineering',
         link: '/application/letter-of-motivation-slovakia-masters-degree-software-engineering',
