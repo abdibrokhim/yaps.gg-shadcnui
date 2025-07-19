@@ -24,6 +24,40 @@ type Application = {
 
 export const APPLICATIONS: Application[] = [
     {
+        uid: 'application-64',
+        title: 'Letter of Motivation | Slovakia Masters Degree | Software Engineering',
+        link: '/application/letter-of-motivation-slovakia-masters-degree-software-engineering',
+        socials: {
+            medium: '',
+            dev: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        applicationStatus: 'rejected',
+        writingType: ['Letter of Motivation'],
+        applicationType: ['graduate degree'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
+    },
+    {
+        uid: 'application-63',
+        title: 'Future Port Awards 2025',
+        link: '/application/future-port-awards-2025',
+        socials: {
+            medium: '',
+            dev: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        applicationStatus: 'in-progress',
+        writingType: ['Q&A Essay', 'Essay'],
+        applicationType: ['scholarship', 'fellowship', 'competition', 'startup'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
+    },
+    {
         uid: 'application-62',
         title: 'Elite Program Software Engineering Short Q&A Essays',
         link: '/application/elite-program-software-engineering-short-qa-essays',
