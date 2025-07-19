@@ -24,6 +24,23 @@ type Application = {
 
 export const APPLICATIONS: Application[] = [
     {
+        uid: 'application-62',
+        title: 'Elite Program Software Engineering Short Q&A Essays',
+        link: '/application/elite-program-software-engineering-short-qa-essays',
+        socials: {
+            medium: '',
+            dev: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        applicationStatus: 'rejected',
+        writingType: ['Q&A Essay', 'Essay'],
+        applicationType: ['scholarship', 'fellowship'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
+    },
+    {
         uid: 'application-61',
         title: 'Hack the North 2025',
         link: '/application/hack-the-north-2025',
