@@ -24,6 +24,23 @@ type Application = {
 
 export const APPLICATIONS: Application[] = [
     {
+        uid: 'application-66',
+        title: 'Statement of Objectives | LMU Elite Graduate Program Software Engineering 2025 | Software Engineering Scientist',
+        link: '/application/statement-of-objectives-lmu-elite-graduate-program-software-engineering-2025-software-engineering-scientist',
+        socials: {
+            medium: '',
+            dev: '',
+            youtube: '',
+            patreon: '',
+            topmate: '',
+        },
+        applicationStatus: 'rejected',
+        writingType: ['Statement of Objectives'],
+        applicationType: ['graduate degree'],
+        appliedYear: '2025',
+        requiredSubscription: 'free'
+    },
+    {
         uid: 'application-65',
         title: 'The EITN EBRAINS Fall School in Computational Neuroscience',
         link: '/application/eitn-ebrains-fall-school-in-computational-neuroscience',
