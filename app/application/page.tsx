@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { APPLICATIONS } from './data'
 import { 
   Card, 
@@ -17,7 +17,7 @@ import {
 } from '@/components/ui/tabs'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { BookOpen, ChevronDown, ChevronRight, ListCollapse, CircleDollarSign, User, Youtube, ListFilter, PenBox, Trophy, Copy, RotateCcw, Check } from 'lucide-react'
+import { BookOpen, ChevronRight, ListCollapse, CircleDollarSign, User, Youtube, ListFilter, PenBox, Trophy, Copy, RotateCcw, Check, Info } from 'lucide-react'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -25,7 +25,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { toast } from 'sonner'
-import { Separator } from '@/components/ui/separator'
 
 export default function ApplicationsPage() {
   const [filteredApplications, setFilteredApplications] = useState(APPLICATIONS)
@@ -33,6 +32,7 @@ export default function ApplicationsPage() {
   const [selectedYear, setSelectedYear] = useState('all')
   const [selectedType, setSelectedType] = useState('all')
   const [expandedCards, setExpandedCards] = useState<Record<string, boolean>>({})
+  const [floatingCardPosition, setFloatingCardPosition] = useState<{uid: string, x: number, y: number, side: 'left' | 'right'} | null>(null)
 
   // Get unique years from applications
   const years = ['all', ...new Set(APPLICATIONS.map(app => app.appliedYear || ''))]
@@ -68,6 +68,18 @@ export default function ApplicationsPage() {
     setFilteredApplications(filtered)
   }, [selectedStatus, selectedYear, selectedType])
 
+  // Close floating card when clicking outside
+  useEffect(() => {
+    const handleClickOutside = () => {
+      setFloatingCardPosition(null)
+    }
+    
+    if (floatingCardPosition) {
+      document.addEventListener('click', handleClickOutside)
+      return () => document.removeEventListener('click', handleClickOutside)
+    }
+  }, [floatingCardPosition])
+
   // Get badge variant based on hackathon status
   const getBadgeVariant = (status: string) => {
       switch(status) {
@@ -85,13 +97,24 @@ export default function ApplicationsPage() {
       toast.success("Copied to clipboard")
   }
 
-  const toggleCardExpand = (uid: string, e: React.MouseEvent) => {
+  const handleInfoClick = (uid: string, e: React.MouseEvent) => {
     e.preventDefault()
     e.stopPropagation()
-    setExpandedCards(prev => ({
-      ...prev,
-      [uid]: !prev[uid]
-    }))
+    
+    const rect = (e.target as HTMLElement).getBoundingClientRect()
+    const viewportWidth = window.innerWidth
+    const cardWidth = 320 // Approximate width of floating card
+    
+    // Determine if we should show on left or right
+    const spaceOnRight = viewportWidth - rect.right
+    const spaceOnLeft = rect.left
+    const side = spaceOnRight >= cardWidth ? 'right' : 'left'
+    
+    // Calculate position
+    const x = side === 'right' ? rect.right + 8 : rect.left - cardWidth - 8
+    const y = rect.top
+    
+    setFloatingCardPosition({ uid, x, y, side })
   }
 
   const resetFilters = () => {
@@ -295,41 +318,66 @@ export default function ApplicationsPage() {
                             )}
                           </DropdownMenuContent>
                         </DropdownMenu>
+                        
+                        <Button 
+                          size="icon" 
+                          variant="ghost" 
+                          className="rounded-full h-8 w-8 cursor-pointer" 
+                          onClick={(e) => handleInfoClick(app.uid, e)}
+                        >
+                          <Info className="h-4 w-4" />
+                        </Button>
                       </div>
                     </div>
                   </CardHeader>
                 </Link>
-                
-                <div className="px-4 cursor-pointer" onClick={(e) => toggleCardExpand(app.uid, e)}>
-                  <div className="flex flex-col items-center justify-center">
-                    <Separator className="flex-grow" />
-                    <ChevronDown className={`h-4 w-4 transition-transform ${expandedCards[app.uid] ? 'rotate-180' : ''}`} />
-                  </div>
-                </div>
-                
-                {expandedCards[app.uid] && (
-                  <CardContent className="pt-0 px-4 animate-in fade-in-50 duration-300">
-                    <div className="space-y-3 mt-2 text-sm text-muted-foreground">
-                      <div>
-                        <span className="font-medium text-foreground">Writing Type:</span> {app.writingType?.join(', ') || 'N/A'}
-                      </div>
-                      <div>
-                        <span className="font-medium text-foreground">Application Type:</span> {app.applicationType?.join(', ') || 'N/A'}
-                      </div>
-                      <div>
-                        <span className="font-medium text-foreground">Year:</span> {app.appliedYear || 'N/A'}
-                      </div>
-                      <div>
-                        <span className="font-medium text-foreground">Status:</span> {app.applicationStatus.charAt(0).toUpperCase() + app.applicationStatus.slice(1)}
-                      </div>
-                    </div>
-                  </CardContent>
-                )}
               </Card>
             ))}
           </div>
         </TabsContent>
       </Tabs>
+
+      {/* Floating Card */}
+      {floatingCardPosition && (
+        <div 
+          className="fixed z-50 animate-in fade-in-50 duration-200"
+          style={{
+            left: floatingCardPosition.x,
+            top: floatingCardPosition.y,
+          }}
+          onClick={(e) => e.stopPropagation()}
+        >
+          <Card className="w-80 shadow-lg border-2 py-0">
+            <CardContent className="p-4">
+              {(() => {
+                const app = filteredApplications.find(a => a.uid === floatingCardPosition.uid)
+                if (!app) return null
+                
+                return (
+                  <div className="space-y-3 text-sm">
+                    <div>
+                      <span className="font-medium text-foreground">Writing Type:</span> 
+                      <div className="text-muted-foreground mt-1">{app.writingType?.join(', ') || 'N/A'}</div>
+                    </div>
+                    <div>
+                      <span className="font-medium text-foreground">Application Type:</span> 
+                      <div className="text-muted-foreground mt-1">{app.applicationType?.join(', ') || 'N/A'}</div>
+                    </div>
+                    <div>
+                      <span className="font-medium text-foreground">Year:</span> 
+                      <div className="text-muted-foreground mt-1">{app.appliedYear || 'N/A'}</div>
+                    </div>
+                    <div>
+                      <span className="font-medium text-foreground">Status:</span> 
+                      <div className="text-muted-foreground mt-1">{app.applicationStatus.charAt(0).toUpperCase() + app.applicationStatus.slice(1)}</div>
+                    </div>
+                  </div>
+                )
+              })()}
+            </CardContent>
+          </Card>
+        </div>
+      )}
     </div>
   )
 }
