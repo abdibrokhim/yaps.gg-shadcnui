@@ -130,6 +130,7 @@ export default function RootLayout({
         </ThemeProvider>
         <Analytics />
         <Toaster theme='dark' />
+        <elevenlabs-convai agent-id="agent_8101k4a55mcgeywv1hkjthwy0x7h"></elevenlabs-convai><script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
       </body>
     </html>
   )
