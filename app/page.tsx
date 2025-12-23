@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import { usePathname } from "next/navigation"
 import { AppSidebar } from "@/components/app-sidebar"
 import {
@@ -68,6 +69,38 @@ const badgeRotations = [3, -2, 4];
 const blurDirections = ["bottom", "right", "left"] as const;
 
 export default function HomePage() {
+  const [showChoice, setShowChoice] = useState(true)
+
+  if (showChoice) {
+    return (
+      <div className="relative w-full min-h-screen pb-20 flex items-center justify-center">
+        <div className="text-center space-y-6">
+          <div className="text-2xl md:text-3xl font-semibold">
+            Where would you like to go?
+          </div>
+          <div className="flex items-center justify-center gap-6">
+            <button
+              className="text-primary underline underline-offset-4"
+              onClick={() => setShowChoice(false)}
+            >
+              stay here
+            </button>
+            <span className="text-muted-foreground">or</span>
+            <button
+              className="text-foreground/80 hover:text-foreground underline underline-offset-4"
+              onClick={() =>
+                (window.location.href =
+                  "https://yapsgg.notion.site/Ibrohim-Abdivokhidov-2d2465f04ab5816d8fb5d3e5f9fff17e?source=copy_link")
+              }
+            >
+              try new look
+            </button>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="relative w-full min-h-screen pb-20">
       {/* Background with subtle gradient overlay */}
